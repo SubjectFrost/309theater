@@ -14,7 +14,8 @@
 if (1 < 2) {
 echo '<span style="float.right"><a href="#" onclick = "isSelected()" ><img
 name="cursor" src="uofttheater/images/green.png" width="30" height="30" border="1"
-alt="cursor image" title="selection"></a></span>'}; ?>
+alt="cursor image" title="selection"></a></span>';
+} ?>
 
 <span style="float.right"><a href="#" onclick = "select()" ><img
 name="linebutton" src="uofttheater/images/white.png" width="30" height="30" border="1"
