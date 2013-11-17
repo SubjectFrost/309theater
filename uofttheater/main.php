@@ -85,7 +85,7 @@ class Main extends CI_Controller {
 	    $this->theater_model->populate();
 	    $this->showtime_model->populate();
 	     
-	    //Then we redirect to the index page again
+	    //Then we redirect to the admin page again
 	    redirect('../../../admin.php', 'refresh');
 	     
     }
@@ -100,9 +100,35 @@ class Main extends CI_Controller {
 	    $this->theater_model->delete();
 	    $this->showtime_model->delete();
 	     
-    	//Then we redirect to the index page again
+    	//Then we redirect to the admin page again
     	redirect('../../../admin.php', 'refresh');
     
+    }
+    
+    function fullDelete()
+    {
+	    $this->load->model('movie_model');
+	    $this->load->model('theater_model');
+	    $this->load->model('showtime_model');
+	    $this->load->model('ticket_model');
+    	
+	    $this->ticket_model->delete();
+	    $this->movie_model->delete();
+	    $this->theater_model->delete();
+	    $this->showtime_model->delete();
+	     
+    	//Then we redirect to the admin page again
+    	redirect('../../../admin.php', 'refresh');
+    
+    }
+    
+    function delete_tickets()
+    {
+	    $this->load->model('ticket_model');
+	    
+	    $this->ticket_model->delete();
+	//Then we redirect to the index page again
+    	redirect('../../../admin.php', 'refresh');
     }
     
 }
