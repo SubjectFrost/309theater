@@ -4,7 +4,19 @@
   <title>Index</title>
  </head>
  <body>
-
+ <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+<script>
+$(function() {
+$( "#datepicker" ).datepicker({
+showOn: "button",
+buttonImage: "images/calendar.gif",
+buttonImageOnly: true
+});
+});
+</script>
  <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="return validateForm()" method="post">
  <p>Your name: <input type="text" name="name" id="name"; ?></p>
  <p>Credit card number: <input type="text" name="creditcardnumber" id = "creditcardnumber"></p>
@@ -38,25 +50,6 @@ Hi <?php echo htmlspecialchars($_POST["name"]); ?>.
 Card number: <?php echo (int)$_POST["creditcardnumber"]; ?>.
 
 
-<?php
-	  $myCalendar = new tc_calendar("date", true);
-	  $myCalendar->setIcon("calendar/images/iconCalendar.gif");
-	  $myCalendar->setDate(01, 03, 1960);
-	  $myCalendar->setPath("calendar/");
-	  $myCalendar->setYearInterval(1960, 2015);
-	  $myCalendar->dateAllow('1960-01-01', '2015-03-01');
-	  $myCalendar->setSpecificDate(array("2011-04-01", "2011-04-13", "2011-04-25"), 0, 'month');
-	  $myCalendar->setOnChange("myChanged('test')");
-	  $myCalendar->writeScript();
-	  ?>
-
-<script language="javascript">
-<!--
-function myChanged(v){
-	alert("Hello, value has been changed : "+document.getElementById("date1").value+"["+v+"]");
-}
-//-->
-</script>
  </body>
  </html>
 
