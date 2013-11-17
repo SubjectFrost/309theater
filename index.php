@@ -61,7 +61,7 @@ echo "</form>";
 echo "Hi";
 echo "htmlspecialchars($_POST[\"name\"])";
 echo ". Card number: ";
-echo "(int)$_POST[\"creditcardnumber\"];
+echo "(int)$_POST[\"creditcardnumber\"]";
 echo ".";
 ?>
 
