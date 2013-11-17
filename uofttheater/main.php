@@ -104,6 +104,35 @@ class Main extends CI_Controller {
 		$this->load->view('template', $data);
     }
     
+	function showTheaters()
+    {
+		//First we load the library and the model
+		$this->load->library('table');
+		$this->load->model('theater_model');
+		
+		//Then we call our model's get_showtimes function
+		$theater = $this->theater_model->get_theaters();
+
+		//If it returns some results we continue
+		if ($theater->num_rows() > 0){
+		
+			//Prepare the array that will contain the data
+			$table = array();	
+	
+			$table[] = array('Theater id', 'Name', 'Address');
+		
+		   foreach ($theater->result() as $row){
+				$table[] = array($row->id,$row->name,$row->address);
+		   }
+			//Next step is to place our created array into a new array variable, one that we are sending to the view.
+			$data['theater'] = $table; 		   
+		}
+		
+		//Now we are prepared to call the view, passing all the necessary variables inside the $data array
+		$data['main']='main/theaters';
+		$this->load->view('template', $data);
+    }
+    
     function populate()
     {
 	    $this->load->model('movie_model');
