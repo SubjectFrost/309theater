@@ -39,7 +39,7 @@ buttonImageOnly: true
     }
         
     function index() {
-	    	$data['main']='main/index';
+	    	$data['main']='uofttheater/main/index';
 	    	$this->load->view('template', $data);
     }
     
@@ -66,7 +66,7 @@ buttonImageOnly: true
 		}
 		
 		//Now we are prepared to call the view, passing all the necessary variables inside the $data array
-		$data['main']='main/movies';
+		$data['main']='uofttheater/main/movies';
 		$this->load->view('template', $data);
  }
  ?>
