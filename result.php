@@ -3,7 +3,8 @@
 
 <?php
 $con=mysqli_connect("bungle07.cs.toronto.edu:3306","g1ight","430994","g1ight");
-// Check connectionif (mysqli_connect_errno())
+
+if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
