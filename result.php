@@ -39,7 +39,7 @@
 		$this->load->view('template', $data);
     }
 ?>
-
+foo
 
 </body>
 </html>
