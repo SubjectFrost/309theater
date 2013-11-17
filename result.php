@@ -3,7 +3,7 @@
 
 <?php
 
-$this->db->query("SELECT * FROM showtime");
+$this->db->query("SELECT * FROM movie");
 
 while($row = $this->db->query($result);)
   {
