@@ -10,15 +10,12 @@
 
 
 <div id = "buttons">
-<span style="float.right">
-<?php 
-if (1 < 2) {
 
-echo "<form action=\"";
-echo $_SERVER["PHP_SELF"];
-echo "\" method=\"POST\"><input type=\"hidden\" name=\"variable\" value=\"50\" /><input type=\"image\" src=\"green.png\" name=\"submit\"/></form>";
-} 
-?>
+<span style="float.right">
+<form action="some_page.php" method="POST">
+    <input type="hidden" name="variable" value="50" />
+    <input type="image" src="image.png" name="submit" />
+</form>
 </span>
 
 <span style="float.right"><a href="#" onclick = "select()" ><img
