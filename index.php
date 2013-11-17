@@ -12,7 +12,7 @@
  <p><input type="submit" value="submit"></p>
 
 <script type="text/javascript"src="livevalidation.js">
-	var name = new LiveValidation("name");
+	var name = new LiveValidation('name');
 	name.add(Validate.Presence);
 	var card = new LiveValidation("card");
 	card.add(Validate.Numericality, {onlyInteger: true} );
