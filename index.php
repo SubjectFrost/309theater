@@ -26,6 +26,15 @@ function toggleForm() {
  <p>Date: <input type="text" id="date" /></p>
  <p><input type="submit" value="submit" id="submit"></p>
  </form>
+
+ 
+ <form action =" <?php echo $_SERVER["PHP_SELF"]; ?>" onsubmit="return validateForm()" method="post" id="form2" >
+ <?php 
+ if (0 < 1) {
+ echo "<p>Your name: <input type=\"text\" name=\"name\" id=\"name\"></p><p>Credit card number: <input type=\"text\" name=\"creditcardnumber\" id = \"creditcardnumber\"></p><p>Expiration date: <br>yy <input type=\"text\" name = \"exp_year\" id = \"exp_year\" size = \"2\"><br>mm <input type = \"text\" name=\"exp_month\" id = \"exp_month\" size = \"2\"> </p><p><input type=\"submit\" value=\"submit\" id=\"submit2\"></p>";
+ }
+?>
+
  
  <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="return validateForm()" method="post" id="form2" >
  <p>Your name: <input type="text" name="name" id="name"></p>
