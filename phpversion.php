@@ -10,12 +10,15 @@
 
 
 <div id = "buttons">
+<span style="float.right">
 <?php 
 if (1 < 2) {
-echo '<span style="float.right"><a href="#" onclick = "isSelected()" ><img
-name="cursor" src="uofttheater/images/green.png" width="30" height="30" border="1"
-alt="cursor image" title="selection"></a></span>';
-} ?>
+
+<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+<input type="image" src="green.png" name="green" value="clicked" alt="Submit" />
+</form>
+} 
+?>
 
 <span style="float.right"><a href="#" onclick = "select()" ><img
 name="linebutton" src="uofttheater/images/white.png" width="30" height="30" border="1"
