@@ -53,11 +53,7 @@ echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat3\" value=\"clicked\"
 }
 ?>
 
-<span style="float.right"><a href="#" onclick = "taken()" ><img
-name="boxbutton" src="uofttheater/images/yellow.png" width="30" height="30" border="1"
-alt="square image" title="draw a square"></a></span>
-
-
+//this is a comment
 
 
 </div>
