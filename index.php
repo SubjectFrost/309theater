@@ -18,21 +18,22 @@ buttonImageOnly: true
 });
 
 function toggleForm() {
-document.getElementById("form2").disabled = true;
+
 }
 </script>
 
- <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="return toggleForm()" method="post" id="datepicker">
+ <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="return validateForm()" method="post" id="datepicker">
  <p>Date: <input type="text" id="date" /></p>
  <p><input type="submit" value="submit" id="submit"></p>
  </form>
+ <?php 
+ if (1 < 0) {
+ echo "<form action=\"";
+ echo $_SERVER["PHP_SELF"];
+ echo "\"  onsubmit=\"return validateForm()\" method=\"post\" id=\"form2\" ><p>Your name: <input type=\"text\" name=\"name\" id=\"name\"></p><p>Credit card number: <input type=\"text\" name=\"creditcardnumber\" id = \"creditcardnumber\"></p><p>Expiration date: <br>yy <input type=\"text\" name = \"exp_year\" id = \"exp_year\" size = \"2\"><br>mm <input type = \"text\" name=\"exp_month\" id = \"exp_month\" size = \"2\"> </p><p><input type=\"submit\" value=\"submit\" id=\"submit2\"></p>";
+ }
+?>
  
- <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="return validateForm()" method="post" id="form2" >
- <p>Your name: <input type="text" name="name" id="name"; ?></p>
- <p>Credit card number: <input type="text" name="creditcardnumber" id = "creditcardnumber"></p>
- <p>Expiration date: <br>yy <input type="text" name = "exp_year" id = "exp_year" size = "2"><br>mm <input type = "text" name="exp_month" id = "exp_month" size = "2"> </p>
- <p><input type="submit" value="submit" id="submit2"></p>
-
 <script type="text/javascript">
 var today = new Date();
 
@@ -55,10 +56,14 @@ var today = new Date();
 	expy.add(Validate.Presence);
 	
  </script>
-</form>
-Hi <?php echo htmlspecialchars($_POST["name"]); ?>.
-Card number: <?php echo (int)$_POST["creditcardnumber"]; ?>.
-
+ <?php
+echo "</form>";
+echo "Hi";
+echo "htmlspecialchars($_POST[\"name\"])";
+echo ". Card number: 
+echo "(int)$_POST[\"creditcardnumber\"];
+echo ".";
+?>
 
  </body>
  </html>
