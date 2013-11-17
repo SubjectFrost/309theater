@@ -205,8 +205,9 @@ class Main extends CI_Controller {
     function create_ticket()
     {
 	  $this->load->model('ticket_model');
-	  add_ticket($first,$last,$creditcardnumber,$creditcardexpiration,$showtime_id,$seat)
-    
+	  add_ticket('nom','moo',1234567890654321,2015,11737,1)
+	  
+	  redirect('../../../admin.php', 'refresh');
     }
     
 }
