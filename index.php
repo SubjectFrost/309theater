@@ -1,4 +1,5 @@
 <html>
+<script type="text/javascript" src="livevalidation.js"></script>
  <head>
   <title>Index</title>
  </head>
@@ -12,10 +13,10 @@
  
  
  
- <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
- <p>Your name: <input type="text" name="name" id="name" value="<?php echo $_POST['name']; ?>"/></p>
- <p>Your age: <input type="text" name="age" id = "age"/></p>
- <p><input type="submit" /></p>
+ <form action="<?php echo $_SERVER['PHP_SELF']; ?>"  onsubmit="return validateForm()" method="post">
+ <p>Your name: <input type="text" name="name" id="name"; ?>"></p>
+ <p>Your age: <input type="text" name="age" id = "age"></p>
+ <p><input type="submit" value="submit"></p>
 </form>
 
 <script type="text/javascript">
