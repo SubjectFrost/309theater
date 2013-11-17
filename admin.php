@@ -4,6 +4,8 @@
 
 ?>
 
+<a href="uofttheater/index.php/main/createTicket">Create Ticket</a><br>
+
 <a href="uofttheater/index.php/main/showMovies">Show Movies</a><br>
 
 <a href="uofttheater/index.php/main/showTickets">Show Tickets</a><br>
