@@ -17,17 +17,13 @@ buttonImageOnly: true
  , minDate: +1, maxDate: "+14D"});
 });
 
-function toggleForm() {
-
-}
 </script>
-
- <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="action.php" method="post" id="datepicker">
+ <form action="action.php"  onsubmit="action.php" method="post" id="datepicker">
  <p>Date: <input type="text" id="date" /></p>
+ 
  <p><input type="submit" value="submit" id="submit"></p>
+ <input type="hidden" name = "redirect" VALUE="action.php">
  </form>
-
-
  </body>
  </html>
 
