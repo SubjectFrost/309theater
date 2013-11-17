@@ -76,3 +76,7 @@ class Result extends CI_Controller {
     }
     
 }
+
+echo anchor('showShowtimes','Show Showtimes') . "<br />";
+
+?>
