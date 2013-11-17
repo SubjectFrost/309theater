@@ -6,7 +6,7 @@
  <body>
 
  <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="return validateForm()" method="post">
- <p>Your name: <input type="text" name="name" id="name"; ?></p>
+ <p>Your name: <input type="text" name="name" id="name"></p>
  <p>Credit card number: <input type="text" name="card" id = "card"></p>
  <p>Expiration date: mm <input type = "text" name="exp_month" id = "exp_month" size = "2"> yy <input type="text" name = "exp_year" id = "exp_year" size = "2"></p>
  <p><input type="submit" value="submit"></p>
