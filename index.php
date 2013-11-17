@@ -4,18 +4,7 @@
   <title>Index</title>
  </head>
  <body>
-<?php
-	  $myCalendar = new tc_calendar("date2");
-	  $myCalendar->setIcon("calendar/images/iconCalendar.gif");
-	  $myCalendar->setDate(date('d'), date('m'), date('Y'));
-	  $myCalendar->setPath("calendar/");
-	  $myCalendar->setYearInterval(1970, 2020);
-	  $myCalendar->dateAllow('2008-05-13', '2015-03-01', false);
-	  $myCalendar->startMonday(true);
-	  $myCalendar->disabledDay("Sat");
-	  $myCalendar->disabledDay("sun");
-	  $myCalendar->writeScript();
-	  ?>
+
  <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="return validateForm()" method="post">
  <p>Your name: <input type="text" name="name" id="name"; ?></p>
  <p>Credit card number: <input type="text" name="creditcardnumber" id = "creditcardnumber"></p>
@@ -47,5 +36,21 @@ var today = new Date();
 </form>
 Hi <?php echo htmlspecialchars($_POST["name"]); ?>.
 Card number: <?php echo (int)$_POST["creditcardnumber"]; ?>.
+
+
+<?php
+	  $myCalendar = new tc_calendar("date");
+	  $myCalendar->setIcon("calendar/images/iconCalendar.gif");
+	  $myCalendar->setDate(date('d'), date('m'), date('Y'));
+	  $myCalendar->setPath("calendar/");
+	  $myCalendar->setYearInterval(1970, 2020);
+	  $myCalendar->dateAllow('2008-05-13', '2015-03-01', false);
+	  $myCalendar->startMonday(true);
+	  $myCalendar->disabledDay("Sat");
+	  $myCalendar->disabledDay("sun");
+	  $myCalendar->writeScript();
+	  ?>
 </html>
  </body>
+ 
+ 
