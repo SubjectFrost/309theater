@@ -54,7 +54,7 @@ class Main extends CI_Controller {
 		$this->load->model('result_model');
 		
 		//Then we call our model's get_showtimes function
-		$results = $this->result_model->get_results();
+		$results = $this->result_model->get_results("2013-11-20",65,49);
 
 		//If it returns some results we continue
 		if ($results->num_rows() > 0){
