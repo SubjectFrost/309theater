@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
 	  $myCalendar = new tc_calendar("date1", true);
 	  $myCalendar->setIcon("calendar/images/iconCalendar.gif");
@@ -17,3 +19,5 @@ function myChanged(v){
 }
 //-->
 </script>
+</body>
+</html>
