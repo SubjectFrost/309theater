@@ -20,7 +20,7 @@ buttonImageOnly: true
 });
 
 </script>
- <form action="/uofttheater/action.php"  onsubmit="/uofttheater/action.php" method="post" id="datepicker">
+ <form action="uofttheater/action.php"  onsubmit="uofttheater/action.php" method="post" id="datepicker">
  <p>Date: <input type="text" id="date" /></p>
  
  <p><input type="submit" value="submit" id="submit"></p>
@@ -45,7 +45,7 @@ buttonImageOnly: true
     
  //First we load the library and the model
 		$this->load->library('table');
-		$this->load->model('movie_model');
+		$this->load->model('uofttheater/movie_model');
 		
 		//Then we call our model's get_showtimes function
 		$movies = $this->movie_model->get_movies();
