@@ -11,7 +11,7 @@
 
 <div id = "buttons">
 <?php 
-if (($_POST['seat1'] == "clicked") && ($_POST['seat2'] == "not_clicked")) {
+if (($_POST['seat1'] == "clicked") && ($_POST['seat2'] != "clicked")) {
 
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
@@ -25,7 +25,7 @@ echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"clicked\"
 }
 ?>
 <?php 
-if (($_POST['seat2'] == "clicked") && ($_POST['seat1'] == "not_clicked")) {
+if (($_POST['seat2'] == "clicked") && ($_POST['seat1'] != "clicked")) {
 
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
