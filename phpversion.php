@@ -3,7 +3,7 @@
 <title>Test</title>
 <body>
 
-<?php echo '<p>Moo</p>';
+<?php echo '<p>Select a seat.</p>';
 
 
 ?>
@@ -53,7 +53,7 @@ echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat3\" value=\"clicked\"
 }
 ?>
 
-//this is a comment
+
 
 
 </div>
