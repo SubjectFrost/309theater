@@ -15,7 +15,8 @@
 if (1 < 2) {
 
 <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
-<input type="image" src="green.png" name="green" value="clicked"/>
+<input type="hidden" name="variable" value="50" />
+<input type="image" src="green.png" name="submit"/>
 </form>
 } 
 ?>
