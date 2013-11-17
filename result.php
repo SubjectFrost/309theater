@@ -2,7 +2,7 @@
 <body>
 
 <?php
-$con=mysqli_connect("bungle07.cs.toronto.edu:3306","g1ight","430994","g1ight");
+$con=mysqli_connect();
 
 if (mysqli_connect_errno())
   {

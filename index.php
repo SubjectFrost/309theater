@@ -1,5 +1,7 @@
 <html>
 <script type="text/javascript" src="livevalidation.js"></script>
+
+ 
  <head>
   <title>Index</title>
  </head>
@@ -23,6 +25,8 @@ buttonImageOnly: true
  
  <p><input type="submit" value="submit" id="submit"></p>
  <input type="hidden" name = "redirect" VALUE="action.php">
+ 
+ 
  </form>
  </body>
  </html>
