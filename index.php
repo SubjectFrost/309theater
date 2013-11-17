@@ -17,7 +17,9 @@ buttonImageOnly: true
 });
 });
 </script>
+
  <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="return validateForm()" method="post">
+ <p>Date: <input type="text" id="datepicker" /></p>
  <p>Your name: <input type="text" name="name" id="name"; ?></p>
  <p>Credit card number: <input type="text" name="creditcardnumber" id = "creditcardnumber"></p>
  <p>Expiration date: <br>yy <input type="text" name = "exp_year" id = "exp_year" size = "2"><br>mm <input type = "text" name="exp_month" id = "exp_month" size = "2"> </p>
