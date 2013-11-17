@@ -31,7 +31,7 @@ var today = new Date();
 	expy.add(Validate.Numericality, { minimum: 1, maximum: 99, onlyInteger: true });
 	expy.add(Validate.Length, { is: 2 } );
 	expy.add(Validate.Presence);
-	expy.add(Validate.Custom, { against: function() { return (exp_year < 13)}});
+	
  </script>
 </form>
 Hi <?php echo htmlspecialchars($_POST["name"]); ?>.
@@ -39,18 +39,25 @@ Card number: <?php echo (int)$_POST["creditcardnumber"]; ?>.
 
 
 <?php
-	  $myCalendar = new tc_calendar("date");
+	  $myCalendar = new tc_calendar("date", true);
 	  $myCalendar->setIcon("calendar/images/iconCalendar.gif");
-	  $myCalendar->setDate(date('d'), date('m'), date('Y'));
+	  $myCalendar->setDate(01, 03, 1960);
 	  $myCalendar->setPath("calendar/");
-	  $myCalendar->setYearInterval(1970, 2020);
-	  $myCalendar->dateAllow('2008-05-13', '2015-03-01', false);
-	  $myCalendar->startMonday(true);
-	  $myCalendar->disabledDay("Sat");
-	  $myCalendar->disabledDay("sun");
+	  $myCalendar->setYearInterval(1960, 2015);
+	  $myCalendar->dateAllow('1960-01-01', '2015-03-01');
+	  $myCalendar->setSpecificDate(array("2011-04-01", "2011-04-13", "2011-04-25"), 0, 'month');
+	  $myCalendar->setOnChange("myChanged('test')");
 	  $myCalendar->writeScript();
 	  ?>
-</html>
+
+<script language="javascript">
+<!--
+function myChanged(v){
+	alert("Hello, value has been changed : "+document.getElementById("date1").value+"["+v+"]");
+}
+//-->
+</script>
  </body>
- 
+ </html>
+
  
