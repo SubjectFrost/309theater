@@ -1,8 +1,8 @@
 <html>
 <body>
 
-Welcome <?php echo $_POST["name"]; ?><br>
-Your email address is: <?php echo $_POST["email"]; ?>
+<a href="uofttheater/index.php/main/populate">Populate Database</a><br>
+<a href="uofttheater/index.php/main/delete">Delete Database</a>
 
 </body>
 </html> 
