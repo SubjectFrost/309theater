@@ -11,22 +11,33 @@
 
 <div id = "buttons">
 <?php 
-if ($_POST['variable'] == "clicked") {
+if ($_POST['seat1'] == "clicked") {
 
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
-echo "\" method=\"POST\"><input type=\"hidden\" name=\"variable\" value=\"not_clicked\" /><input type=\"image\" src=\"uofttheater/images/green.png\" name=\"submit\"/></form>";
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"not_clicked\" /><input type=\"image\" src=\"uofttheater/images/green.png\" name=\"submit\"/></form>";
 }
 else
 {
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
-echo "\" method=\"POST\"><input type=\"hidden\" name=\"variable\" value=\"clicked\" /><input type=\"image\" src=\"uofttheater/images/white.png\" name=\"submit\"/></form>";
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"clicked\" /><input type=\"image\" src=\"uofttheater/images/white.png\" name=\"submit\"/></form>";
 }
 ?>
-<span style="float.right"><a href="#" onclick = "select()" ><img
-name="linebutton" src="uofttheater/images/white.png" width="30" height="30" border="1"
-alt="line image" title="draw a line"></a></span>
+<?php 
+if ($_POST['seat2'] == "clicked") {
+
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat2\" value=\"not_clicked\" /><input type=\"image\" src=\"uofttheater/images/green.png\" name=\"submit\"/></form>";
+}
+else
+{
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat2\" value=\"clicked\" /><input type=\"image\" src=\"uofttheater/images/white.png\" name=\"submit\"/></form>";
+}
+?>
 
 <span style="float.right"><a href="#" onclick = "taken()" ><img
 name="boxbutton" src="uofttheater/images/yellow.png" width="30" height="30" border="1"
