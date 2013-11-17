@@ -29,10 +29,9 @@ var today = new Date();
 	expm.add(Validate.Custom, { against: function() { return expired(exp_month, exp_year)} });
 	var expy = new LiveValidation('exp_year');
 	expy.add(Validate.Numericality, { minimum: 1, maximum: 9999, onlyInteger: true });
-	expy.add(Validate.Length, { is: 4 } );
+	expy.add(Validate.Length, { is: 2 } );
 	expy.add(Validate.Presence);
-	expy.add(Validate.Custom, { against: function() { return (exp_year < today.getFullYear())}});
-	sprintf(today.getFullYear());
+	expy.add(Validate.Custom, { against: function() { return (exp_year < 13)}});
  </script>
 </form>
 Hi <?php echo htmlspecialchars($_POST["name"]); ?>.
