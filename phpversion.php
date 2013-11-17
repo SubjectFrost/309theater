@@ -19,6 +19,7 @@ echo $_SERVER["PHP_SELF"];
 echo "\" method=\"POST\"><input type=\"hidden\" name=\"variable\" value=\"50\" /><input type=\"image\" src=\"green.png\" name=\"submit\"/></form>";
 } 
 ?>
+</span>
 
 <span style="float.right"><a href="#" onclick = "select()" ><img
 name="linebutton" src="uofttheater/images/white.png" width="30" height="30" border="1"
