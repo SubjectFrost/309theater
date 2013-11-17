@@ -45,6 +45,36 @@ class Main extends CI_Controller {
 		$this->load->view('template', $data);
     }
     
+	
+	function showResults()
+    {
+
+		//First we load the library and the model
+		$this->load->library('table');
+		$this->load->model('result_model');
+		
+		//Then we call our model's get_showtimes function
+		$results = $this->result_model->get_showtimes();
+
+		//If it returns some results we continue
+		if ($results->num_rows() > 0){
+		
+			//Prepare the array that will contain the data
+			$table = array();	
+	
+			$table[] = array('Movie','Theater','Address','Date','Time','Available');
+		
+		   foreach ($showtimes->result() as $row){
+				$table[] = array($row->title,$row->name,$row->address,$row->date,$row->time,$row->available);
+		   }
+			//Next step is to place our created array into a new array variable, one that we are sending to the view.
+			$data['result'] = $table; 		   
+		}
+		
+		//Now we are prepared to call the view, passing all the necessary variables inside the $data array
+		$data['main']='main/results';
+		$this->load->view('template', $data);
+    }
 	function showTickets()
     {
 
