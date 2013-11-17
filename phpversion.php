@@ -12,15 +12,15 @@
 
 <div id = "buttons">
 <span style="float.right"><a href="#" onclick = "isSelected()" ><img
-name="cursor" src="green.png" width="30" height="30" border="1"
+name="cursor" src="uofttheaters/images/green.png" width="30" height="30" border="1"
 alt="cursor image" title="selection"></a></span>
 
 <span style="float.right"><a href="#" onclick = "select()" ><img
-name="linebutton" src="white.png" width="30" height="30" border="1"
+name="linebutton" src="uofttheaters/images/white.png" width="30" height="30" border="1"
 alt="line image" title="draw a line"></a></span>
 
 <span style="float.right"><a href="#" onclick = "taken()" ><img
-name="boxbutton" src="yellow.png" width="30" height="30" border="1"
+name="boxbutton" src="uofttheaters/images/yellow.png" width="30" height="30" border="1"
 alt="square image" title="draw a square"></a></span>
 
 
