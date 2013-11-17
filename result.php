@@ -11,7 +11,10 @@ foreach ($query->result() as $row)
 {
     echo $row->ticket;
 }
-foo!
+}
+else
+{
+echo "foo!";
 }
 
 ?>
