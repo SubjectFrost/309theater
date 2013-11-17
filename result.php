@@ -3,14 +3,12 @@
 
 <?php
 
-$this->db->query("SELECT * FROM movie");
+$query = $this->db->get('g1ight');
 
-while($row = $this->db->query("SELECT * FROM movie");)
-  {
-  echo $row['movie_id'] . " " . $row['theater_id'];
-  echo "<br>";
-  }
-
+foreach ($query->result() as $row)
+{
+    echo $row->title;
+}
 
 ?>
 
