@@ -125,7 +125,7 @@ class Main extends CI_Controller {
 				$table[] = array($row->id,$row->name,$row->address);
 		   }
 			//Next step is to place our created array into a new array variable, one that we are sending to the view.
-			$data['theater'] = $table; 		   
+			$data['theaters'] = $table; 		   
 		}
 		
 		//Now we are prepared to call the view, passing all the necessary variables inside the $data array
