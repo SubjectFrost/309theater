@@ -3,7 +3,7 @@
 
 <?php
 
-$query = $this->db->get('SELECT ticket FROM g1ight');
+$query = $this->db->get('SELECT showtime FROM g1ight');
 
 if ($query->num_rows() > 0)
 {
