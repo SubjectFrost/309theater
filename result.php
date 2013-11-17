@@ -3,7 +3,7 @@
 
 <?php
 
-$query = $this->db->get('g1ight');
+$query = $this->db->get('SELECT ticket FROM g1ight');
 
 foreach ($query->result() as $row)
 {
