@@ -11,17 +11,17 @@
 
 <div id = "buttons">
 <?php 
-if (isset($_POST['variable'])) {
+if ($_POST['variable'] == "clicked") {
 
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
-echo "\" method=\"POST\"><input type=\"hidden\" name=\"variable\" value=\"clicked\" /><input type=\"image\" src=\"uofttheater/images/green.png\" name=\"submit\"/></form>";
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"variable\" value=\"not_clicked\" /><input type=\"image\" src=\"uofttheater/images/green.png\" name=\"submit\"/></form>";
 }
 else
 {
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
-echo "\" method=\"POST\"><input type=\"hidden\" name=\"variable\" value=\"50\" /><input type=\"image\" src=\"uofttheater/images/white.png\" name=\"submit\"/></form>";
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"variable\" value=\"clicked\" /><input type=\"image\" src=\"uofttheater/images/white.png\" name=\"submit\"/></form>";
 }
 ?>
 <span style="float.right"><a href="#" onclick = "select()" ><img
