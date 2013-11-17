@@ -1,5 +1,6 @@
 <html>
 <body>
+<script type="text/javascript" src="livevalidation.js"></script>
  <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="return validateForm()" method="post" id="form2" >
  <p>Your name: <input type="text" name="name" id="name"></p>
  <p>Credit card number: <input type="text" name="creditcardnumber" id = "creditcardnumber"></p>
