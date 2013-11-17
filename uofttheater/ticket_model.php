@@ -8,22 +8,22 @@ class Ticket_model extends CI_Model {
 		return $query;	
 	}  
 
-	function add_ticket(first,last,creditcardnumber,creditcardexpiration,showtime_id,seat) {
+	function add_ticket($first,$last,$creditcardnumber,$creditcardexpiration,$showtime_id,$seat) {
 		//make sure there is an available seat
 		$sqel = "select available from showtime where id=?";
-		$available = $this->db->query($sqel,array(showtime_id));
+		$available = $this->db->query($sqel,array($showtime_id));
 		foreach ($available->result() as $row){
 			$ava = $row->available;
 		}
 		if ($ava > 0){
 		      //insert ticket into the ticket table
 		      $sql = "insert into ticket (first,last,creditcardnumber,creditcardexpiration,showtime_id,seat) values (?,?,?,?,?,?)";
-		      $this->db->query($sql,array(first,last,creditcardnumber,creditcardexpiration,showtime_id,seat));
+		      $this->db->query($sql,array($first,$last,$creditcardnumber,$creditcardexpiration,$showtime_id,$seat));
 		      
 		      $av = $ava - 1;
 		      
 		      $sqll = "update showtime set available= ? where id= ?";
-		      $this->db->query($sqll,array($av,showtime_id));
+		      $this->db->query($sqll,array($av,$showtime_id));
 		}
 		
 	}
