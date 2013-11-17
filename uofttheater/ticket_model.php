@@ -10,7 +10,8 @@ class Ticket_model extends CI_Model {
 
 	function add_ticket(first,last,creditcardnumber,creditcardexpiration,showtime_id,seat) {
 		//make sure there is an available seat
-		$available = $this->db->query("select available from showtime where id="+ showtime_id);
+		$sqel = "select available from showtime where id=?";
+		$available = $this->db->query($sqel,array(showtime_id);
 		if ($available > 0){
 		      //insert ticket into the ticket table
 		      $sql = "insert into ticket (first,last,creditcardnumber,creditcardexpiration,showtime_id,seat) values (?,?,?,?,?,?)";
