@@ -2,7 +2,7 @@
 <script type="text/javascript" src="livevalidation.js"></script>
 <body>
 
- <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="return validateForm()" method="post" id="form2" >
+ <form action="<?php echo $_SERVER["PHP_SELF"]; ?>"  onsubmit="createTicket()" method="post" id="form2" >
  <p>Your name: <input type="text" name="name" id="name"></p>
  <p>Credit card number: <input type="text" name="creditcardnumber" id = "creditcardnumber"></p>
  <p>Expiration date: <br>yy <input type="text" name = "exp_year" id = "exp_year" size = "2"><br>mm <input type = "text" name="exp_month" id = "exp_month" size = "2"> </p>
