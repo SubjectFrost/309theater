@@ -7,7 +7,7 @@ $query = $this->db->get('g1ight');
 
 foreach ($query->result() as $row)
 {
-    echo $row->title;
+    echo $row->ticket;
 }
 
 ?>
