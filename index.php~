@@ -60,7 +60,7 @@ var today = new Date();
 echo "</form>";
 echo "Hi";
 echo "htmlspecialchars($_POST[\"name\"])";
-echo ". Card number: ";
+echo ". Card number: 
 echo "(int)$_POST[\"creditcardnumber\"];
 echo ".";
 ?>
