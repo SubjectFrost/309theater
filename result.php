@@ -27,6 +27,7 @@ $this->load->library('table');
 		$data['main']='main/showtimes';
 		$this->load->view('template', $data);
 
+
 ?>
 
 
