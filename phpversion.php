@@ -14,7 +14,9 @@
 <?php 
 if (isset($_POST['variable'])) {
 
-echo "<img src=\"uofttheater/images/green.png\"/>";
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"variable\" value=\"clicked\" /><input type=\"image\" src=\"uofttheater/images/green.png\" name=\"submit\"/></form>";
 }
 else
 {
