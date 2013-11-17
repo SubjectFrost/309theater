@@ -12,9 +12,9 @@
 $(function() {
 $( "#datepicker" ).datepicker({
 showOn: "button",
-buttonImage: "images/calendar.gif",
+buttonImage: "uofttheater/images/calendar.gif",
 buttonImageOnly: true
-});
+ , minDate: +1, maxDate: "+14D"});
 });
 </script>
 
