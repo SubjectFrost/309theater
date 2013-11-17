@@ -20,16 +20,28 @@ buttonImageOnly: true
 });
 
 </script>
- <form action="uofttheater/action.php"  onsubmit="uofttheater/action.php" method="post" id="datepicker">
+ <form action="uofttheater/result.php"  onsubmit="uofttheater/action.php" method="post" id="datepicker">
  <p>Date: <input type="text" id="date" /></p>
- 
+ <p>Movie ID: <input type = "text" id = "movieID"/></p>
+ <p>Theater ID: <input type = "text" id = "theaterID"/></p>
  <p><input type="submit" value="submit" id="submit"></p>
- <input type="hidden" name = "redirect" VALUE="action.php">
+ 
  
  
  </form>
- <a href = "uofttheater/index.php/main/showMovies">Show movies</a>
+ 
+ <script type="text/javascript">
 
+
+ var a = new LiveValidation("movieID");
+ a.add(Validate.Numericality, { onlyInteger: true } );
+ var b = new LiveValidation("theaterID");
+ b.add(Validate.Numericality, { onlyInteger: true } );
+ 
+ </script>
+ 
+ <a href = "uofttheater/index.php/main/showMovies">Show Movies</a><br>
+<a href = "uofttheater/index.php/main/showTheaters">Show Theaters</a>
  </body>
  </html>
 
