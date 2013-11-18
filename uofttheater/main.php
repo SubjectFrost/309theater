@@ -57,7 +57,7 @@ class Main extends CI_Controller {
 		
 		//Then we call our model's get_showtimes function
 		//$results = $this->result_model->get_results(&_POST["movieID"], $_POST["theaterID"], $_POST["date"]);
-		//$results = null;
+		$results = null;
 		
 		//$this->db->select('*');
 		//$this->db->from('movie m , theater t, showtime s');
