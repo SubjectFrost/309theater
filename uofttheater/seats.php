@@ -1,6 +1,5 @@
 
-<?php echo '<p>Select a seat.</p>';
-
+<?php
 session_start();
 $_SESSION["show_id"] = $_POST["showtime_id"];
 ?>

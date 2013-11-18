@@ -1,9 +1,10 @@
-<html>
-<script type="text/javascript" src="livevalidation.js"></script>
 <?php
 session_start();
 
 ?>
+
+<html>
+<script type="text/javascript" src="livevalidation.js"></script>
  
  <head>
   <title>Index</title>
