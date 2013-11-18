@@ -50,7 +50,7 @@ class Main extends CI_Controller {
     {
 		//echo $_POST["movieID"];
 		//First we load the library and the model
-		//$this->load->library('table');
+		$this->load->library('table');
 		//$this->load->model('result_model');
 		
 		//Then we call our model's get_showtimes function
