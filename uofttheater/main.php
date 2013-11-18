@@ -253,15 +253,47 @@ class Main extends CI_Controller {
 		  $this->load->model('ticket_model');
 		  return $this->ticket_model->add_ticket($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtime_id"],1);
 	  }
+
+	  $table = array($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtime_id"],1);
+	  $data['ticket_info'] = $table; 
+	  $data['main']='main/receipt';
+	  $this->load->view('template', $data);
 	  return -1;
-	  
     }
     
     function isSeatTaken($showtime_id, $seat)
     {
-	  echo 1;
 	  $this->load->model('ticket_model');
 	  return $this->ticket_model->check_seat($showtime_id, $seat);
+    }
+    
+	function seats()
+    {
+		//First we load the library and the model
+		$this->load->library('table');
+		$this->load->model('ticket_model');
+		
+		//Then we call our model's get_showtimes function
+		$theater = $this->ticket_model->get_tickets();
+
+		//If it returns some results we continue
+		if ($theater->num_rows() > 0){
+		
+			//Prepare the array that will contain the data
+			$table = array();	
+	
+			$table[] = array('Theater id', 'Name', 'Address');
+		
+		   foreach ($theater->result() as $row){
+				$table[] = array($row->id,$row->name,$row->address);
+		   }
+			//Next step is to place our created array into a new array variable, one that we are sending to the view.
+			$data['theaters'] = $table; 		   
+		}
+		
+		//Now we are prepared to call the view, passing all the necessary variables inside the $data array
+		$data['main']='main/seats';
+		$this->load->view('template', $data);
     }
     
 }
