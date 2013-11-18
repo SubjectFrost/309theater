@@ -1,5 +1,5 @@
 <html>
-<script type="text/javascript" src="livevalidation.js"></script>
+<script type="text/javascript" src="../livevalidation.js"></script>
 <body>
 
  <form action="index.php/main/createTicket"  onsubmit="return validate()" method="post" id="form" >
@@ -9,6 +9,7 @@
  <p>Expiration date: <br>yy <input type="text" name = "exp_year" id = "exp_year" size = "2"><br>mm <input type = "text" name="exp_month" id = "exp_month" size = "2"> </p>
  <input type="text" name="seat" id="seat">
  <input type="text" name="showtime_id" id="showtime_id">
+ <input type="text" name="ccex" id="ccex">
  
  <p><input type="submit" value="submit" id="submit"></p>
  
