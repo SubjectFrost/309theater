@@ -221,14 +221,15 @@ class Main extends CI_Controller {
 	  
 	  if (($ccn_digits == 16) && ($ccex_digits == 4)) {
 		  $this->load->model('ticket_model');
-		  $this->ticket_model->add_ticket($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],11729,1);
+		  return $this->ticket_model->add_ticket($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],11729,1);
 	  }
-	  
+	  return -1;
 	  
     }
     
     function isSeatTaken($showtime_id, $seat)
     {
+	  echo 1;
 	  $this->load->model('ticket_model');
 	  return $this->ticket_model->check_seat($showtime_id, $seat);
     }

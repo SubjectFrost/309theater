@@ -11,23 +11,24 @@ class Ticket_model extends CI_Model {
 	function check_seat($showtime_id,$seat)
 	{
 		$sql = "select available from showtime where id=?";
-		$available = $this->db->query($sqel,array($showtime_id));
+		$available = $this->db->query($sql,array($showtime_id));
+		$ava = 0;
 		
 		foreach ($available->result() as $row){
 			$ava = $row->available;
 		}
 		if ($ava == 3){
-			return 1;
+			return 0;
 		}
 		if ($ava == 0){
-			return 0;
+			return 1;
 		}
 		if ($ava > 0){
 			$query = $this->db->query("select seat from ticket where showtime_id=? and seat=?",array($showtime_id,$seat));
 			if ($query->num_rows() > 0) {
-				return 0;
+				return 1;
 			}
-			return 1;
+			return 0;
 		}
 		
 	}
@@ -49,6 +50,11 @@ class Ticket_model extends CI_Model {
 		      
 		      $sqll = "update showtime set available= ? where id= ?";
 		      $this->db->query($sqll,array($av,$showtime_id));
+		      return 1;
+		}
+		else
+		{
+		      return -1;
 		}
 		
 	}
