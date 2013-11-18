@@ -279,10 +279,10 @@ class Main extends CI_Controller {
 		if ($theater->num_rows() > 0){
 	
 			$table = array(0, 0, 0);
-		
+			$showtime_id = $_POST["showtime_id"];
 		   for ($x=1; $x <=3; $x++){
 				$y = $x - 1;
-				$table[$y] = $this->ticket_model->check_seat($_POST["showtime_id"], $x);
+				$table[$y] = $this->ticket_model->check_seat( $showtime_id, $x);
 		   }
 			//Next step is to place our created array into a new array variable, one that we are sending to the view.
 			$data['seats'] = $table; 		   
