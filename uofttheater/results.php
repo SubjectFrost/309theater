@@ -1,6 +1,8 @@
 <html>
 <body>
-<form action="seats" onsubmit="return seats()"method="post" id="seats"><p>Showtime ID: <input type="text" name="showtime_id"></p><input type = "submit" value = "submit" id = "submit1"></form>
+<form action="seats" onsubmit="return seats()"method="post" id="seats">
+<p>Showtime ID: <input type="text" name="showtime_id"></p>
+<input type = "submit" value = "submit" id = "submit"></form>
 
 <?php
 echo anchor('../../../index.php','Back') . "<br />";
