@@ -96,6 +96,10 @@ class Main extends CI_Controller {
 		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where t.id = ? and s.date = ?";
 		$results = $this->db->query($sql,array($_POST["theaterID"], $_POST["date"]));
 		}
+		else {
+		$results = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s ";
+		
+		}
 		
 		
 		//If it returns some results we continue
