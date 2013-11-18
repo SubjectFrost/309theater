@@ -2,7 +2,9 @@
 <head>
 <title>Test</title>
 <body>
-
+<?php
+echo "Choose your preferred seat.";
+?>
 
 <div id = "buttons">
 <?php 
