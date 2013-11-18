@@ -4,15 +4,7 @@
 <body>
 
 <?php echo '<p>Select a seat.</p>';
-if (index.php/main/isSeatTaken/11734/1 == 0) {
-echo 'moo';
-}
-else
-{
-echo 'foo';
-}
 
-?>
 
 
 <div id = "buttons">
