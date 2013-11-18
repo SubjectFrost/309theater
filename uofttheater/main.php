@@ -57,13 +57,13 @@ class Main extends CI_Controller {
 		$results = $this->result_model->get_results();
 
 		
-		$this->db->select('*');
-		$this->db->from('movie m , theater t, showtime s');
-		&this->db->where('m.id =  , t.id=');
+		//$this->db->select('*');
+		//$this->db->from('movie m , theater t, showtime s');
+		//&this->db->where('m.id =  , t.id=');
 		
-		if ($_POST["$movieID"] != '0') $this->db->where('m.id', $_POST["$movieID"]);
-		if ($_POST["$theaterID"] != '0') $this->db->where('t.id',$_POST["$theaterID"]);
-		if ($_POST["$date"] != '0') $this->db->where('s.time', $_POST["$date"]);
+		//if ($_POST["$movieID"] != '0') $this->db->where('m.id', $_POST["$movieID"]);
+		//if ($_POST["$theaterID"] != '0') $this->db->where('t.id',$_POST["$theaterID"]);
+		//if ($_POST["$date"] != '0') $this->db->where('s.time', $_POST["$date"]);
 		//$results = $this->db->get();
 		
 		//If it returns some results we continue
