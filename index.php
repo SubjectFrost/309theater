@@ -16,7 +16,7 @@ $( "#date" ).datepicker({
 showOn: "button",
 buttonImage: "uofttheater/images/calendar.gif",
 buttonImageOnly: true
- , minDate: +1, maxDate: "+14D"});
+ , minDate: +1, maxDate: "+14D", dateFormat: 'yy-mm-dd'});
 });
 
 </script>
