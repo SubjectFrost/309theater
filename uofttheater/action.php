@@ -26,7 +26,6 @@ buttonImageOnly: true
 });
  </script>
  <input type="hidden" name="seat" id="seat" value = "<?=$_POST["seat"]?>"/> 
- <input type="hidden" name="showtimeid" id = "showtimeid" value="showtime_id"/>
  <input type = "hidden" name = "movieID" value = "<?=$_POST["movieID"]?>"/>
  <input type = "hidden" name = "theaterID" value = "<?=$_POST["theaterID"]?>"/>
  <input type = "hidden" name = "date" value = "<?=$_POST["date"]?>"/>
