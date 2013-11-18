@@ -70,7 +70,7 @@ class Main extends CI_Controller {
 		
 		}
 		elseif (empty($_POST["movieID"])  && empty($_POST["theaterID"])  && !empty($_POST["date"]) ) {
-		$sql = "select s.id m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where s.date = ?";
+		$sql = "select s.id, m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where s.date = ?";
 		$results = $this->db->query($sql,array($_POST["date"]));
 		
 		}
