@@ -10,9 +10,9 @@
 
 
  <form action="index.php/main/createTicket"  onsubmit="return validate()" method="post" id="form" >
- <p>Your name: <br>First: <input type="text" name="fname" id="fname">
- <br>Last: <input type="text" name = "lname" id = "lname"></p>
- <p>Credit card number: <input type="text" name="ccn" id = "ccn"></p>
+ <p>Your name: <br>First: <input type="text" name="fname" id="fname"/>
+ <br>Last: <input type="text" name = "lname" id = "lname"/></p>
+ <p>Credit card number: <input type="text" name="ccn" id = "ccn"/></p>
  <p>Expiration Date: <input type="text" name = "ccex" id="ccex" size= 4 /></p>
  
  <script>
