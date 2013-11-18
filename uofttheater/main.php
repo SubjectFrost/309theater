@@ -103,7 +103,7 @@ class Main extends CI_Controller {
 			$table[] = array('ShowID','Movie','Theater','Address','Date','Time','Available');
 		
 		   foreach ($results->result() as $row){
-				$table[] = array($row->id$row->title,$row->name,$row->address,$row->date,$row->time,$row->available);
+				$table[] = array($row->id,$row->title,$row->name,$row->address,$row->date,$row->time,$row->available);
 		   }
 			//Next step is to place our created array into a new array variable, one that we are sending to the view.
 			$data['results'] = $table; 		   
