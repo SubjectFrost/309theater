@@ -16,7 +16,7 @@
 
 if(!empty($seats)) {
 
-if ($seats[1] == 0) {
+if ($seats[0] == 0) {
 if (($_POST['seat1'] == "clicked") && ($_POST['seat2'] != "clicked") && ($_POST['seat3'] != "clicked")) {
 
 echo "<form action=\"";
@@ -38,7 +38,7 @@ echo "\" method=\"POST\"><input type=\"image\" src=\"images/yellow.png\" name=\"
 }
 
 
-if ($seats[2] == 0) {
+if ($seats[1] == 0) {
 if (($_POST['seat2'] == "clicked") && ($_POST['seat1'] != "clicked") && ($_POST['seat3'] != "clicked")) {
 
 echo "<form action=\"";
@@ -60,7 +60,7 @@ echo "\" method=\"POST\"><input type=\"image\" src=\"images/yellow.png\" name=\"
 }
 
 
-if ($seats[3] == 0) {
+if ($seats[2] == 0) {
 if (($_POST['seat3'] == "clicked") && ($_POST['seat1'] != "clicked") && ($_POST['seat2'] != "clicked")) {
 
 echo "<form action=\"";
