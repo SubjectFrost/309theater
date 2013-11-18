@@ -1,14 +1,17 @@
-<html>
-<head>
-<title>Test</title>
-<body>
 
 <?php echo '<p>Select a seat.</p>';
 
 session_start();
 $_SESSION["show_id"] = $_POST["showtime_id"];
 ?>
- 
+
+<html>
+<head>
+<title>Test</title>
+<body>
+
+ <?php echo '<p>Select a seat.</p>';
+ ?>
 
 <div id = "buttons">
 <?php 

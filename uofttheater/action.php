@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <html>
 <script type="text/javascript" src="../livevalidation.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
@@ -5,10 +9,7 @@
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <link rel="stylesheet" href="/resources/demos/style.css" />
 <body>
-<?php
-session_start();
-echo $_POST["showtime_id"];
-?>
+
 
 
 
@@ -29,7 +30,7 @@ buttonImageOnly: true
  </script>
  
  <input type="hidden" name="seat" id="seat" value = "<?=$_POST["seat"]?>"/> 
- <input type="hidden" name="showtimeid" id = "showtimeid" value="<?=$_POST["showtime_id"]?>"/>
+ <input type="hidden" name="showtimeid" id = "showtimeid" value="<?php echo "show_id=". $_SESSION['show_id']; ?>"/>
  <input type = "hidden" name = "movieID" value = "<?=$_POST["movieID"]?>"/>
  <input type = "hidden" name = "theaterID" value = "<?=$_POST["theaterID"]?>"/>
  <input type = "hidden" name = "date" value = "<?=$_POST["date"]?>"/>
