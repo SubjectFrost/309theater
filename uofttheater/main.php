@@ -204,10 +204,17 @@ class Main extends CI_Controller {
     
     function createTicket($first,$last,$ccn,$ccex,$showtime_id,$seat)
     {
-	  $this->load->model('ticket_model');
-	  $this->ticket_model->add_ticket($first,$last,$ccn,$ccex,$showtime_id,$seat);
+	  //ccn is creditcardnumber (should be 16 digits), ccex is creditcardexpiration (should be 4 digits)
 	  
-	  redirect('../../../admin.php', 'refresh');
+	  $ccn_digits = strlen((string)$ccn);
+	  $ccex_digits = strlen((string)$ccex);
+	  
+	  if (($ccn_digits == 16) && ($ccex_digits == 4)) {
+		  $this->load->model('ticket_model');
+		  $this->ticket_model->add_ticket($first,$last,$ccn,$ccex,$showtime_id,$seat);
+	  }
+	  
+	  
     }
     
 }
