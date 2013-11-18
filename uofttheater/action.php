@@ -6,10 +6,11 @@
 <link rel="stylesheet" href="/resources/demos/style.css" />
 <body>
 
- <form action="index.php/main/createTicket"  onsubmit="return validate()" method="post" id="form" >
  
+ <form action="index.php/main/seats"  onsubmit="seats()" method="post" id="seats" >
  <p>Showtime ID: <input type="text" name="showtime_id" id="showtime_id"></p>
- 
+ <input type = "submit" value = "submit" id = "submit">
+ </form>
  <?php
 //echo anchor('','Back') . "<br />";
 
@@ -88,7 +89,7 @@ echo "\" method=\"POST\"><input type=\"image\" src=\"images/yellow.png\" name=\"
 
 ?>
  
- 
+ <form action="index.php/main/createTicket"  onsubmit="return validate()" method="post" id="form" >
  <p>Your name: <br>First: <input type="text" name="fname" id="fname">
  <br>Last: <input type="text" name = "lname" id = "lname"></p>
  <p>Credit card number: <input type="text" name="ccn" id = "ccn"></p>
