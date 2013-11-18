@@ -202,7 +202,7 @@ class Main extends CI_Controller {
     	redirect('../../../admin.php', 'refresh');
     }
     
-    function createTicket($first,$last,$ccn,$ccex,$showtime_id,$seat)
+    function createTicket($_POST["$fname"],$_POST["$lname"],$_POST["$ccn"],$_POST["$ccex"],$_POST["$showtime_id"],$_POST["$seat"])
     {
 	  //ccn is creditcardnumber (should be 16 digits), ccex is creditcardexpiration (should be 4 digits)
 	  
