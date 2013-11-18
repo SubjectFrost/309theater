@@ -17,17 +17,17 @@ class Ticket_model extends CI_Model {
 			$ava = $row->available;
 		}
 		if ($ava == 3){
-			return 1;
+			return 0;
 		}
 		if ($ava == 0){
-			return 0;
+			return 1;
 		}
 		if ($ava > 0){
 			$query = $this->db->query("select seat from ticket where showtime_id=? and seat=?",array($showtime_id,$seat));
 			if ($query->num_rows() > 0) {
-				return 0;
+				return 1;
 			}
-			return 1;
+			return 0;
 		}
 		
 	}
