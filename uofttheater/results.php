@@ -1,6 +1,6 @@
 <html>
 <body>
-<form action="../../index.php/main/seats" onsubmit="return seats()" method="post" id="seats">
+<form action="../../action.php" onsubmit="return seats()" method="post" id="seats">
 <p>Showtime ID: <input type="text" name="showtimeid" id="showtimeid"/></p>
 <input type = "hidden" name = "movieID" value = "<?=$_POST["movieID"]?>"/>
  <input type = "hidden" name = "theaterID" value = "<?=$_POST["theaterID"]?>"/>
