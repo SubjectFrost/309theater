@@ -9,6 +9,86 @@
  <form action="index.php/main/createTicket"  onsubmit="return validate()" method="post" id="form" >
  
  <p>Showtime ID: <input type="text" name="showtime_id" id="showtime_id"></p>
+ 
+ <?php
+//echo anchor('','Back') . "<br />";
+
+
+if(!empty($seats)) {
+
+if ($seats[1] == 0) {
+if (($_POST['seat1'] == "clicked") && ($_POST['seat2'] != "clicked") && ($_POST['seat3'] != "clicked")) {
+
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"not_clicked\" /><input type=\"image\" src=\"images/green.png\" name=\"submit\"/></form>";
+}
+else
+{
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"clicked\" /><input type=\"image\" src=\"images/white.png\" name=\"submit\"/></form>";
+}
+}
+else
+{
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"image\" src=\"images/yellow.png\" name=\"submit\"/></form>";
+}
+
+
+if ($seats[2] == 0) {
+if (($_POST['seat2'] == "clicked") && ($_POST['seat1'] != "clicked") && ($_POST['seat3'] != "clicked")) {
+
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat2\" value=\"not_clicked\" /><input type=\"image\" src=\"images/green.png\" name=\"submit\"/></form>";
+}
+else
+{
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat2\" value=\"clicked\" /><input type=\"image\" src=\"images/white.png\" name=\"submit\"/></form>";
+}
+}
+else
+{
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"image\" src=\"images/yellow.png\" name=\"submit\"/></form>";
+}
+
+
+if ($seats[3] == 0) {
+if (($_POST['seat3'] == "clicked") && ($_POST['seat1'] != "clicked") && ($_POST['seat2'] != "clicked")) {
+
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat3\" value=\"not_clicked\" /><input type=\"image\" src=\"images/green.png\" name=\"submit\"/></form>";
+}
+else
+{
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat3\" value=\"clicked\" /><input type=\"image\" src=\"images/white.png\" name=\"submit\"/></form>";
+}
+}
+else
+{
+echo "<form action=\"";
+echo $_SERVER["PHP_SELF"];
+echo "\" method=\"POST\"><input type=\"image\" src=\"images/yellow.png\" name=\"submit\"/></form>";
+}
+
+}
+
+//And if the $site variable is not empty we echo it's content by using the generate method of the table class / library
+//if(!empty($showtimes)) echo $this->table->generate($showtimes); 
+
+?>
+ 
+ 
  <p>Your name: <br>First: <input type="text" name="fname" id="fname">
  <br>Last: <input type="text" name = "lname" id = "lname"></p>
  <p>Credit card number: <input type="text" name="ccn" id = "ccn"></p>
@@ -24,7 +104,7 @@ buttonImageOnly: true
 });
  </script>
  
- <input type="hidden" name="seat" id="seat"> 
+ <input type="hidden" name="seat" id="seat" value = "<?$_POST["seat"]?>"/> 
  <input type = "hidden" name = "movieID" value = "<?=$_POST["movieID"]?>"/>
  <input type = "hidden" name = "theaterID" value = "<?=$_POST["theaterID"]?>"/>
  <input type = "hidden" name = "date" value = "<?=$_POST["date"]?>"/>
