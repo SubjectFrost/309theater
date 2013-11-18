@@ -248,13 +248,13 @@ class Main extends CI_Controller {
 	  
 	  $ccn_digits = strlen((string)$_POST["ccn"]);
 	  $ccex_digits = strlen((string)$_POST["ccex"]);
-	  
+	  echo $_POST["showtimeid"];
 	  if (($ccn_digits == 16) && ($ccex_digits == 4)) {
 		  $this->load->model('ticket_model');
-		  $this->ticket_model->add_ticket($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtimeid"],1);
+		  $this->ticket_model->add_ticket($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtimeid"],$_POST["seat"]);
 	  }
 
-	  $table = array($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtimeid"],1);
+	  $table = array($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtimeid"],$_POST["seat"]);
 	  $data['receipt'] = $table; 
 	  $data['main']='main/receipt';
 	  $this->load->view('template', $data);
