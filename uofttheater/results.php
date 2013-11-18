@@ -1,6 +1,6 @@
 <html>
 <body>
-<form action="seats" onsubmit="return seats()"method="post" id="seats">
+<form action="seats" onsubmit="return seats()" method="post" id="seats">
 <p>Showtime ID: <input type="text" name="showtimeid" id="showtimeid"/></p>
 <input type = "submit" value = "submit" id = "submit"/></form>
 
