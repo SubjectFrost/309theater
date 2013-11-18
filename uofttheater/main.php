@@ -56,6 +56,16 @@ class Main extends CI_Controller {
 		//Then we call our model's get_showtimes function
 		$results = $this->result_model->get_results();
 
+		
+		//$this->db->select('*');
+		//$this->db->from('movie m , theater t, showtime s');
+		//&this->db->where('m.id =  , t.id=');
+		
+		//if ($_POST["$movieID"] != '0') $this->db->where('m.id', $_POST["$movieID"]);
+		//if ($_POST["$theaterID"] != '0') $this->db->where('t.id',$_POST["$theaterID"]);
+		//if ($_POST["$date"] != '0') $this->db->where('s.time', $_POST["$date"]);
+		//$results = $this->db->get();
+		
 		//If it returns some results we continue
 		if ($results->num_rows() > 0){
 		
@@ -202,16 +212,16 @@ class Main extends CI_Controller {
     	redirect('../../../admin.php', 'refresh');
     }
     
-    function createTicket($first,$last,$ccn,$ccex,$showtime_id,$seat)
+    function createTicket()
     {
 	  //ccn is creditcardnumber (should be 16 digits), ccex is creditcardexpiration (should be 4 digits)
 	  
-	  $ccn_digits = strlen((string)$ccn);
-	  $ccex_digits = strlen((string)$ccex);
+	  $ccn_digits = strlen((string)$_POST["ccn"]);
+	  $ccex_digits = strlen((string)$_POST["ccex"]);
 	  
 	  if (($ccn_digits == 16) && ($ccex_digits == 4)) {
 		  $this->load->model('ticket_model');
-		  $this->ticket_model->add_ticket($first,$last,$ccn,$ccex,$showtime_id,$seat);
+		  $this->ticket_model->add_ticket($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],11729,1);
 	  }
 	  
 	  
