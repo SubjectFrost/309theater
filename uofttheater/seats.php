@@ -1,26 +1,8 @@
-<?php
-if(! isset ($_SESSION["show_id"])) {
-$_SESSION["show_id"] = $_POST["showtime_id"];
-}
-?>
-
 <html>
 <head>
 <title>Test</title>
 <body>
 
- <?php echo '<p>Select a seat.</p>';
- if ($_SESSION['show_id'] != NULL)
- {
- $x = $_SESSION['show_id'];
- }
- else
- {
- $_SESSION['show_id'] = $x;
- }
- echo $_SESSION['show_id'];
- echo $x;
- ?>
 
 <div id = "buttons">
 <?php 
@@ -77,7 +59,6 @@ echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat3\" value=\"clicked\"
 
  <form action="action.php"   method="post" id="form" >
 <input type="hidden" name="seat" id="seat" value = "<?=$seat?>"/> 
-<input type="hidden" name="showtime_id" id = "showtime_id" value="<?=$_SESSION["show_id"]?> " />
  <input type = "hidden" name = "movieID" value = "<?=$_POST["movieID"]?>"/>
  <input type = "hidden" name = "theaterID" value = "<?=$_POST["theaterID"]?>"/>
  <input type = "hidden" name = "date" value = "<?=$_POST["date"]?>"/>

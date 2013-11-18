@@ -14,6 +14,7 @@
  <br>Last: <input type="text" name = "lname" id = "lname"/></p>
  <p>Credit card number: <input type="text" name="ccn" id = "ccn"/></p>
  <p>Expiration Date: <input type="text" name = "ccex" id="ccex" size= 4 /></p>
+ <p>Verify Showtime ID: <input type="text" name="showtime_id" id="showtime_id"/></p>
  
  <script>
  $(function() {
@@ -21,12 +22,11 @@ $( "#ccex" ).datepicker({
 showOn: "button",
 buttonImage: "images/calendar.gif",
 buttonImageOnly: true
- , minDate: +1,  dateFormat: 'mmyy'});
+ , minDate: +1,  dateFormat: 'mmy'});
 });
  </script>
- <?php echo $_SESSION['show_id']; ?>
  <input type="hidden" name="seat" id="seat" value = "<?=$_POST["seat"]?>"/> 
- <input type="hidden" name="showtimeid" id = "showtimeid" value="<?php echo $_SESSION['show_id']; ?>"/>
+ <input type="hidden" name="showtimeid" id = "showtimeid" value="showtime_id"/>
  <input type = "hidden" name = "movieID" value = "<?=$_POST["movieID"]?>"/>
  <input type = "hidden" name = "theaterID" value = "<?=$_POST["theaterID"]?>"/>
  <input type = "hidden" name = "date" value = "<?=$_POST["date"]?>"/>
