@@ -48,7 +48,8 @@ class Main extends CI_Controller {
 	
 	function showResults()
     {
-		
+	
+		/*	
 		//First we load the library and the model
 		$this->load->library('table');
 		//$this->load->model('result_model');
@@ -111,6 +112,8 @@ class Main extends CI_Controller {
 		//Now we are prepared to call the view, passing all the necessary variables inside the $data array
 		$data['main']='main/results';
 		$this->load->view('template', $data);
+		
+		*/
     }
 	function showTickets()
     {
