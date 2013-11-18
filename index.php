@@ -20,7 +20,7 @@ buttonImageOnly: true
 });
 
 </script>
- <form action="uofttheater/main.php"  onsubmit="return validate()" method="post" id="datepicker">
+ <form action="uofttheater/index.php/main/showResults"  onsubmit="return validate()" method="post" id="datepicker">
  <p>Date: <input type="text" id="date" /></p>
  <p>Movie ID: <input type = "text" id = "movieID"/></p>
  <p>Theater ID: <input type = "text" id = "theaterID"/></p>

@@ -54,7 +54,7 @@ class Main extends CI_Controller {
 		$this->load->model('result_model');
 		
 		//Then we call our model's get_showtimes function
-		//$results = $this->result_model->get_results();
+		$results = $this->result_model->get_results();
 
 		
 		$this->db->select('*');
@@ -64,7 +64,7 @@ class Main extends CI_Controller {
 		if ($_POST["$movieID"] != '0') $this->db->where('m.id', $_POST["$movieID"]);
 		if ($_POST["$theaterID"] != '0') $this->db->where('t.id',$_POST["$theaterID"]);
 		if ($_POST["$date"] != '0') $this->db->where('s.time', $_POST["$date"]);
-		$results = $this->db->get();
+		//$results = $this->db->get();
 		
 		//If it returns some results we continue
 		if ($results->num_rows() > 0){
