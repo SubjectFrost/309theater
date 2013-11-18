@@ -21,7 +21,7 @@ $( "#ccex" ).datepicker({
 showOn: "button",
 buttonImage: "images/calendar.gif",
 buttonImageOnly: true
- , minDate: +1,  dateFormat: 'mmy'});
+ , minDate: +1,  dateFormat: 'mmyy'});
 });
  </script>
  <?php echo $_SESSION['show_id']; ?>
