@@ -46,7 +46,7 @@ class Main extends CI_Controller {
     }
     
 	
-	function showResults($_POST["$date"],$_POST["$movieID"],$_POST["$theaterID"])
+	function showResults()
     {
 
 		//First we load the library and the model
