@@ -11,22 +11,39 @@ else
 {
 echo 'foo';
 }
+class Phpver {
+	function isOccupied($showtime_id,$seat) {
+		//queries the db for informations about the seats
+		$sql = "select available from showtime where id=?";
+		$available = $this->db->query($sql,array($showtime_id));
+		$ava = 0;
+		
+		foreach ($available->result() as $row){
+			$ava = $row->available;
+		}
+		if ($ava == 3){
+			return 0;
+		}
+		if ($ava == 0){
+			return 1;
+		}
+		if ($ava > 0){
+			$query = $this->db->query("select seat from ticket where showtime_id=? and seat=?",array($showtime_id,$seat));
+			if ($query->num_rows() > 0) {
+				return 1;
+			}
+			return 0;
+		}
+	}
 
-$file = "index.php/main/isSeatTaken/11734/1";
-$line = '0';
-if($f = fopen($file, 'r')){
-  $line = fgets($f); // read until first newline
-  fclose($f);
 }
-echo $line;
-
 
 ?>
 
 
 <div id = "buttons">
 <?php 
-if (index.php/main/isSeatTaken/11734/1 == 0) {
+if (isOccupied(11734,1) == 0) {
 if (($_POST['seat1'] == "clicked") && ($_POST['seat2'] != "clicked") && ($_POST['seat3'] != "clicked")) {
 
 echo "<form action=\"";
