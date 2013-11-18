@@ -254,7 +254,7 @@ class Main extends CI_Controller {
 		  $this->ticket_model->add_ticket($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtime_id"],$_POST["seat"]);
 	  }
 
-	  $table = array($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_SESSION["showtime_id"],$_POST["seat"]);
+	  $table = array($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtime_id"],$_POST["seat"]);
 	  $data['receipt'] = $table; 
 	  $data['main']='main/receipt';
 	  $this->load->view('template', $data);
