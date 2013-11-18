@@ -214,7 +214,7 @@ class Main extends CI_Controller {
     	redirect('../../../admin.php', 'refresh');
     }
     
-    function createTicket($_POST["$fname"],$_POST["$lname"],$_POST["$ccn"],$_POST["$ccex"],$_POST["$showtime_id"],$_POST["$seat"])
+    function createTicket()
     {
 	  //ccn is creditcardnumber (should be 16 digits), ccex is creditcardexpiration (should be 4 digits)
 	  
@@ -223,7 +223,7 @@ class Main extends CI_Controller {
 	  
 	  if (($ccn_digits == 16) && ($ccex_digits == 4)) {
 		  $this->load->model('ticket_model');
-		  $this->ticket_model->add_ticket($first,$last,$ccn,$ccex,$showtime_id,$seat);
+		  $this->ticket_model->add_ticket($_POST["$fname"],$_POST["$lname"],$_POST["$ccn"],$_POST["$ccex"],$_POST["$showtime_id"],$_POST["$seat"]);
 	  }
 	  
 	  
