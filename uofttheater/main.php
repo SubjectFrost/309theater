@@ -277,14 +277,11 @@ class Main extends CI_Controller {
 
 		//If it returns some results we continue
 		if ($theater->num_rows() > 0){
-		
-			//Prepare the array that will contain the data
-			$table = array();	
 	
-			$table[] = array('Theater id', 'Name', 'Address');
+			$table = array(0, 0, 0);
 		
-		   foreach ($theater->result() as $row){
-				$table[] = array($row->id,$row->name,$row->address);
+		   for ($x=1; $x <=3; $x++){
+				$table[$x] = $this->ticket_model->check_seat($_POST["showtime_id"], $x);
 		   }
 			//Next step is to place our created array into a new array variable, one that we are sending to the view.
 			$data['seats'] = $table; 		   
