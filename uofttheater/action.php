@@ -1,20 +1,39 @@
 <html>
 <script type="text/javascript" src="../livevalidation.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
 <body>
 
  <form action="index.php/main/createTicket"  onsubmit="return validate()" method="post" id="form" >
+ 
+ <p>Showtime ID: <input type="text" name="showtime_id" id="showtime_id"></p>
  <p>Your name: <br>First: <input type="text" name="fname" id="fname">
  <br>Last: <input type="text" name = "lname" id = "lname"></p>
  <p>Credit card number: <input type="text" name="ccn" id = "ccn"></p>
- <p>Expiration date: <br>yy <input type="text" name = "exp_year" id = "exp_year" size = "2"><br>mm <input type = "text" name="exp_month" id = "exp_month" size = "2"> </p>
- <input type="text" name="seat" id="seat">
- <input type="text" name="showtime_id" id="showtime_id">
- <input type="text" name="ccex" id="ccex">
+ <p>Expiration Date: <input type="text" name = "ccex" id="ccex" size= 4 /></p>
  
+ <script>
+ $(function() {
+$( "#ccex" ).datepicker({
+showOn: "button",
+buttonImage: "images/calendar.gif",
+buttonImageOnly: true
+ , minDate: +1,  dateFormat: 'mmy'});
+});
+ </script>
+ 
+ <input type="hidden" name="seat" id="seat"> 
+ <input type = "hidden" name = "movieID" value = "<?=$_POST["movieID"]?>"/>
+ <input type = "hidden" name = "theaterID" value = "<?=$_POST["theaterID"]?>"/>
+ <input type = "hidden" name = "date" value = "<?=$_POST["date"]?>"/>
  <p><input type="submit" value="submit" id="submit"></p>
  
 <script type="text/javascript">
-var today = new Date();
+var showt = new LiveValidation("showtime_id");
+showt.add(Validate.Presence);
+showt.add(Validate.Numericality, { onlyInteger: true } );
 
  var fname = new LiveValidation("fname");
  fname.add(Validate.Presence);
@@ -26,15 +45,11 @@ var today = new Date();
  ccn.add(Validate.Length, { is: 16 } ); 
  ccn.add(Validate.Presence);
  
- var expm = new LiveValidation('exp_month');
-	expm.add(Validate.Numericality, { minimum: 1, maximum: 12, onlyInteger: true });
-	expm.add(Validate.Length, { is: 2 } ); 
-	expm.add(Validate.Presence);
-	expm.add(Validate.Custom, { against: function() { return expired(exp_month, exp_year)} });
-	var expy = new LiveValidation('exp_year');
-	expy.add(Validate.Numericality, { minimum: 1, maximum: 99, onlyInteger: true });
-	expy.add(Validate.Length, { is: 2 } );
-	expy.add(Validate.Presence);
+ var expd = new LiveValidation('ccex');
+	expd.add(Validate.Numericality, { onlyInteger: true });
+	expd.add(Validate.Length, { is: 4 } ); 
+	expd.add(Validate.Presence);
+	
 	
  </script>
 </form>
