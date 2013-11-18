@@ -2,13 +2,16 @@
 <script type="text/javascript" src="livevalidation.js"></script>
 <body>
 
- <form action="main.php"  onsubmit="return validate()" method="post" id="form" >
+ <form action="uofttheater/index.php/main/createTicket"  onsubmit="return validate()" method="post" id="form" >
  <p>Your name: <br>First: <input type="text" name="fname" id="fname">
  <br>Last: <input type="text" name = "lname" id = "lname"></p>
  <p>Credit card number: <input type="text" name="ccn" id = "ccn"></p>
  <p>Expiration date: <br>yy <input type="text" name = "exp_year" id = "exp_year" size = "2"><br>mm <input type = "text" name="exp_month" id = "exp_month" size = "2"> </p>
+ <input type="text" name="seat" id="seat">
+ <input type="text" name="showtime_id" id="showtime_id">
+ 
  <p><input type="submit" value="submit" id="submit"></p>
-
+ 
 <script type="text/javascript">
 var today = new Date();
 
