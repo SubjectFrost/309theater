@@ -59,37 +59,37 @@ class Main extends CI_Controller {
 		//$results = null;
 				
 		if (!empty($_POST["movieID"]) && empty($_POST["theaterID"]) && empty($_POST["date"]) ) {
-		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where m.id = ?";
+		$sql = "select s.id, m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where m.id = ?";
 		
 		$results = $this->db->query($sql,array($_POST["movieID"]));
 		
 		}
 		elseif (empty($_POST["movieID"])  && !empty($_POST["theaterID"])  && empty($_POST["date"]) ) {
-		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where t.id = ?";
+		$sql = "select s.id, m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where t.id = ?";
 		$results = $this->db->query($sql,array($_POST["theaterID"]));
 		
 		}
 		elseif (empty($_POST["movieID"])  && empty($_POST["theaterID"])  && !empty($_POST["date"]) ) {
-		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where s.date = ?";
+		$sql = "select s.id m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where s.date = ?";
 		$results = $this->db->query($sql,array($_POST["date"]));
 		
 		}
 		elseif (!empty($_POST["movieID"]) && !empty($_POST["theaterID"])  && empty($_POST["date"]) ) {
-		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where m.id = ? and t.id = ?";
+		$sql = "select s.id, m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where m.id = ? and t.id = ?";
 		$results = $this->db->query($sql,array($_POST["movieID"], $_POST["theaterID"]));
 		}
 		
 		
 		elseif (!empty($_POST["movieID"]) && empty($_POST["theaterID"])  && !empty($_POST["date"])) {
-		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where m.id = ? and s.date = ?";
+		$sql = "select s.id, m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where m.id = ? and s.date = ?";
 		$results = $this->db->query($sql,array($_POST["movieID"], $_POST["date"]));
 		}
 		elseif (empty($_POST["movieID"])  && !empty($_POST["theaterID"])  && !empty($_POST["date"])) {
-		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where t.id = ? and s.date = ?";
+		$sql = "select s.id, m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where t.id = ? and s.date = ?";
 		$results = $this->db->query($sql,array($_POST["theaterID"], $_POST["date"]));
 		}
 		else {
-		$results = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s ";
+		$results = "select s.id, m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s ";
 		
 		}
 		
