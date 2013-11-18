@@ -70,7 +70,7 @@ class Main extends CI_Controller {
 		
 		}
 		elseif (empty($_POST["movieID"])  && empty($_POST["theaterID"])  && !empty($_POST["date"]) ) {
-		$sql = "select s.id m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where s.date = ?";
+		$sql = "select s.id, m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where s.date = ?";
 		$results = $this->db->query($sql,array($_POST["date"]));
 		
 		}
@@ -100,10 +100,10 @@ class Main extends CI_Controller {
 			//Prepare the array that will contain the data
 			$table = array();	
 	
-			$table[] = array('Movie','Theater','Address','Date','Time','Available');
+			$table[] = array('ShowID','Movie','Theater','Address','Date','Time','Available');
 		
 		   foreach ($results->result() as $row){
-				$table[] = array($row->title,$row->name,$row->address,$row->date,$row->time,$row->available);
+				$table[] = array($row->id,$row->title,$row->name,$row->address,$row->date,$row->time,$row->available);
 		   }
 			//Next step is to place our created array into a new array variable, one that we are sending to the view.
 			$data['results'] = $table; 		   
