@@ -21,7 +21,9 @@ buttonImageOnly: true
 </script>
  <form action="uofttheater/index.php/main/showResults"  onsubmit="return validate()" method="post" id="datepicker">
  <p>Date: <input type="text" name = "date" id="date" /></p>
+ Fill in:<br/>
  <p>Movie ID: <input type = "text" name = "movieID" id = "movieID"/></p>
+ OR: <br/>
  <p>Theater ID: <input type = "text" name = "theaterID" id = "theaterID"/></p>
  <p><input type="submit" value="submit" id="submit"></p>
  
