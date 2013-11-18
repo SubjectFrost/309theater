@@ -1,15 +1,10 @@
-
-<?php
-
-$_SESSION["show_id"] = $_POST["showtime_id"];
-?>
-
 <html>
 <head>
 <title>Test</title>
 <body>
 
  <?php echo '<p>Select a seat.</p>';
+
  echo $_SESSION['show_id'];
  ?>
 
