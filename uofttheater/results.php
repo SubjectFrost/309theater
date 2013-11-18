@@ -1,7 +1,7 @@
 <html>
 <body>
 <form action="../../seats.php" onsubmit="return seats()" method="post" id="seats">
-<p>Showtime ID: <input type="text" name="showtimeid" id="showtimeid"/></p>
+<p>Showtime ID: <input type="text" name="showtime_id" id="showtime_id"/></p>
 <input type = "hidden" name = "movieID" value = "<?=$_POST["movieID"]?>"/>
  <input type = "hidden" name = "theaterID" value = "<?=$_POST["theaterID"]?>"/>
  <input type = "hidden" name = "date" value = "<?=$_POST["date"]?>"/>

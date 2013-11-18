@@ -248,13 +248,13 @@ class Main extends CI_Controller {
 	  
 	  $ccn_digits = strlen((string)$_POST["ccn"]);
 	  $ccex_digits = strlen((string)$_POST["ccex"]);
-	  echo $_POST["showtimeid"];
+	  echo $_POST["showtime_id"];
 	  if (($ccn_digits == 16) && ($ccex_digits == 4)) {
 		  $this->load->model('ticket_model');
-		  $this->ticket_model->add_ticket($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtimeid"],$_POST["seat"]);
+		  $this->ticket_model->add_ticket($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtime_id"],$_POST["seat"]);
 	  }
 
-	  $table = array($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtimeid"],$_POST["seat"]);
+	  $table = array($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtime_id"],$_POST["seat"]);
 	  $data['receipt'] = $table; 
 	  $data['main']='main/receipt';
 	  $this->load->view('template', $data);
@@ -277,7 +277,7 @@ class Main extends CI_Controller {
 			
 		   for ($x=1; $x <=3; $x++){
 				$y = $x - 1;
-				$table[$y] = $this->ticket_model->check_seat( $_POST["showtimeid"], $x);
+				$table[$y] = $this->ticket_model->check_seat( $_POST["showtime_id"], $x);
 		   }
 			//Next step is to place our created array into a new array variable, one that we are sending to the view.
 			$data['seats'] = $table; 		   

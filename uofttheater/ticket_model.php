@@ -8,10 +8,10 @@ class Ticket_model extends CI_Model {
 		return $query;	
 	}  
 	
-	function check_seat($showtimeid,$seat)
+	function check_seat($showtime_id,$seat)
 	{
 		$sql = "select available from showtime where id=?";
-		$available = $this->db->query($sql,array($showtimeid));
+		$available = $this->db->query($sql,array($showtime_id));
 		$ava = 0;
 		
 		foreach ($available->result() as $row){
@@ -24,7 +24,7 @@ class Ticket_model extends CI_Model {
 			return 1;
 		}
 		if ($ava > 0){
-			$query = $this->db->query("select seat from ticket where showtime_id=? and seat=?",array($showtimeid,$seat));
+			$query = $this->db->query("select seat from ticket where showtime_id=? and seat=?",array($showtime_id,$seat));
 			if ($query->num_rows() > 0) {
 				return 1;
 			}
