@@ -13,10 +13,9 @@ class Ticket_model extends CI_Model {
 		$sql = "select available from showtime where id=?";
 		$available = $this->db->query($sql,array($showtime_id));
 		$ava = 0;
-		return 1;
+		
 		foreach ($available->result() as $row){
 			$ava = $row->available;
-			return 1;
 		}
 		if ($ava == 3){
 			return 0;
