@@ -5,6 +5,7 @@
 
 <?php echo '<p>Select a seat.</p>';
 echo $_POST["showtimeid"];
+$showtimeid = $_POST["showtimeid"];
 ?>
  
 
@@ -16,12 +17,14 @@ $seat = 1;
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
 echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"not_clicked\" /><input type=\"image\" src=\"images/green.png\" name=\"submit\"/></form>";
+echo $_POST["showtimeid"];
 }
 else
 {
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
 echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"clicked\" /><input type=\"image\" src=\"images/white.png\" name=\"submit\"/></form>";
+echo $_POST["showtimeid"];
 }
 ?>
 <?php 
@@ -30,6 +33,7 @@ $seat = 2;
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
 echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat2\" value=\"not_clicked\" /><input type=\"image\" src=\"images/green.png\" name=\"submit\"/></form>";
+echo $_POST["showtimeid"];
 }
 else
 {
@@ -44,6 +48,7 @@ $seat = 3;
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
 echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat3\" value=\"not_clicked\" /><input type=\"image\" src=\"images/green.png\" name=\"submit\"/></form>";
+echo $_POST["showtimeid"];
 }
 else
 {
