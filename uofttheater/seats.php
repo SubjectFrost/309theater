@@ -6,7 +6,7 @@
 <?php echo '<p>Select a seat.</p>';
 
 ?>
- <form action="action.php" method="post">
+ <form action="index.php/main/createTicket" method="post">
  <input type="hidden" name="showtime_id" id = "showtime_id" value="<?=$_POST["showtime_id"]?>"/>
  
  </form>
