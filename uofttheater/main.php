@@ -49,7 +49,7 @@ class Main extends CI_Controller {
 	function showResults()
     {
 	
-		/*	
+			
 		//First we load the library and the model
 		$this->load->library('table');
 		//$this->load->model('result_model');
@@ -70,7 +70,7 @@ class Main extends CI_Controller {
 		
 		}
 		if (empty($_POST["movieID"])  && empty($_POST["theaterID"])  && !empty($_POST["date"]) ) {
-		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where s.date = ?"
+		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where s.date = ?";
 		$results = $this->db->query($sql,array($_POST["date"]));
 		
 		}
@@ -113,7 +113,7 @@ class Main extends CI_Controller {
 		$data['main']='main/results';
 		$this->load->view('template', $data);
 		
-		*/
+		
     }
 	function showTickets()
     {
