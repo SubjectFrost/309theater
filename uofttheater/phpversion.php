@@ -17,7 +17,7 @@ class Phpver {
 		$sql = "select available from showtime where id=?";
 		$available = $this->db->query($sql,array($showtime_id));
 		$ava = 0;
-		
+		return 1;
 		foreach ($available->result() as $row){
 			$ava = $row->available;
 		}
@@ -43,7 +43,8 @@ class Phpver {
 
 <div id = "buttons">
 <?php 
-if (isOccupied(11734,1) == 0) {
+$pphver = new Phpver();
+if ($pphver->isOccupied(11734,1) == 0) {
 if (($_POST['seat1'] == "clicked") && ($_POST['seat2'] != "clicked") && ($_POST['seat3'] != "clicked")) {
 
 echo "<form action=\"";
