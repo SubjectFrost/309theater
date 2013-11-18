@@ -68,6 +68,6 @@ echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat3\" value=\"clicked\"
  <input type = "hidden" name = "theaterID" value = "<?=$_POST["theaterID"]?>"/>
  <input type = "hidden" name = "date" value = "<?=$_POST["date"]?>"/>
  <p><input type="submit" value="submit" id="submit"></p>
-
+</form>
 </body>
 </html>
