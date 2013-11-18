@@ -11,6 +11,16 @@ else
 {
 echo 'foo';
 }
+
+$file = "index.php/main/isSeatTaken/11734/1";
+$line = '0';
+if($f = fopen($file, 'r')){
+  $line = fgets($f); // read until first newline
+  fclose($f);
+}
+echo $line;
+
+
 ?>
 
 
