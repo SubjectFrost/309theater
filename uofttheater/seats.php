@@ -16,14 +16,14 @@ if (($_POST['seat1'] == "clicked") && ($_POST['seat2'] != "clicked") && ($_POST[
 $seat = 1;
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
-echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"not_clicked\" /><input type=\"image\" src=\"images/green.png\" name=\"submit\"/></form>";
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"not_clicked\" /><input type=\"hidden\" name=\"showtime_id\" id = \"showtime_id\" value=\"<?=$_POST[\"showtimeid\"]?>\"/><input type=\"image\" src=\"images/green.png\" name=\"submit\"/></form>";
 
 }
 else
 {
 echo "<form action=\"";
 echo $_SERVER["PHP_SELF"];
-echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"clicked\" /><input type=\"image\" src=\"images/white.png\" name=\"submit\"/></form>";
+echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"clicked\" /><input type=\"hidden\" name=\"showtime_id\" id = \"showtime_id\" value=\"<?=$_POST[\"showtimeid\"]?>\"/><input type=\"image\" src=\"images/white.png\" name=\"submit\"/></form>";
 
 }
 ?>
