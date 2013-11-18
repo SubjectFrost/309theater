@@ -49,6 +49,11 @@ class Ticket_model extends CI_Model {
 		      
 		      $sqll = "update showtime set available= ? where id= ?";
 		      $this->db->query($sqll,array($av,$showtime_id));
+		      return 1;
+		}
+		else
+		{
+		      return -1;
 		}
 		
 	}
