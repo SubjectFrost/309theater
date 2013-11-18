@@ -4,8 +4,7 @@
 <body>
 
 <?php echo '<p>Select a seat.</p>';
-echo $_POST["showtime_id"];
-$showtime_id = $_POST["showtime_id"];
+
 ?>
  
 
