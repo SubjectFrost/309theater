@@ -20,7 +20,7 @@ echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat1\" value=\"clicked\"
 }
 else
 {
-echo "<img src=\"../../images/yellow.png\" >";
+echo "<img src=\"../../images/yellow.png\" ><br/>";
 }
 
 
@@ -40,9 +40,7 @@ echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat2\" value=\"clicked\"
 }
 else
 {
-echo "<form action=\"";
-echo $_SERVER["PHP_SELF"];
-echo "\" method=\"POST\"><input type=\"image\" src=\"../../images/yellow.png\" name=\"submit\"/></form>";
+echo "<img src=\"../../images/yellow.png\" ><br/>";
 }
 
 
@@ -62,9 +60,7 @@ echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat3\" value=\"clicked\"
 }
 else
 {
-echo "<form action=\"";
-echo $_SERVER["PHP_SELF"];
-echo "\" method=\"POST\"><input type=\"image\" src=\"../../images/yellow.png\" name=\"submit\"/></form>";
+echo "<img src=\"../../images/yellow.png\" ><br/>";
 }
 
 }
