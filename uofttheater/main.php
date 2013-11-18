@@ -258,7 +258,6 @@ class Main extends CI_Controller {
 	  $data['receipt'] = $table; 
 	  $data['main']='main/receipt';
 	  $this->load->view('template', $data);
-	  return -1;
     }
     
     function isSeatTaken($showtime_id, $seat)
