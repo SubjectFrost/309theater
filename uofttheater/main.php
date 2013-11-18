@@ -202,10 +202,10 @@ class Main extends CI_Controller {
     	redirect('../../../admin.php', 'refresh');
     }
     
-    function createTicket()
+    function createTicket($first,$last,$ccn,$ccex,$showtime_id,$seat)
     {
 	  $this->load->model('ticket_model');
-	  $this->ticket_model->add_ticket('nom','moo',1234567890654321,2015,11737,1);
+	  $this->ticket_model->add_ticket($first,$last,$ccn,$ccex,$showtime_id,$seat);
 	  
 	  redirect('../../../admin.php', 'refresh');
     }
