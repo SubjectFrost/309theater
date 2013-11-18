@@ -217,5 +217,11 @@ class Main extends CI_Controller {
 	  
     }
     
+    function isSeatTaken($showtime_id, $seat)
+    {
+	  $this->load->model('ticket_model');
+	  return $this->ticket_model->check_seat($showtime_id, $seat);
+    }
+    
 }
 
