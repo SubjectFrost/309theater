@@ -254,18 +254,13 @@ class Main extends CI_Controller {
 		  $this->ticket_model->add_ticket($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtime_id"],1);
 	  }
 
-	  $table = array($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtime_id"],1);
+	  $table = array($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtimeid"],1);
 	  $data['receipt'] = $table; 
 	  $data['main']='main/receipt';
 	  $this->load->view('template', $data);
     }
     
-  /*  function isSeatTaken($showtime_id, $seat)
-    {
-	  $this->load->model('ticket_model');
-	  return $this->ticket_model->check_seat($showtime_id, $seat);
-    }
-    */
+  
 	function seats()
     {
 		//First we load the library and the model
