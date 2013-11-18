@@ -4,7 +4,7 @@
 <body>
 
 <?php echo '<p>Select a seat.</p>';
-
+?>
 
 
 <div id = "buttons">
