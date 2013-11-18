@@ -65,7 +65,7 @@ echo "\" method=\"POST\"><input type=\"hidden\" name=\"seat3\" value=\"clicked\"
 
  <form action="action.php"   method="post" id="form" >
 <input type="hidden" name="seat" id="seat" value = "<?=$seat?>"/> 
-<input type="hidden" name="showtime_id" id = "showtime_id" value="<?=$_POST["showtimeid"]?>"/>
+<input type="hidden" name="showtime_id" id = "showtime_id" value="<?=$showtimeid?>"/>
  <input type = "hidden" name = "movieID" value = "<?=$_POST["movieID"]?>"/>
  <input type = "hidden" name = "theaterID" value = "<?=$_POST["theaterID"]?>"/>
  <input type = "hidden" name = "date" value = "<?=$_POST["date"]?>"/>
