@@ -48,13 +48,7 @@ class Main extends CI_Controller {
 	
 	function showResults()
     {
-		/*echo $_POST["movieID"];
-		echo $_POST["theaterID"];
-		echo $_POST["date"];
-		if ($_POST["movieID"] == "") {
-		echo "lulz";
-		}
-		*/
+		
 		//First we load the library and the model
 		$this->load->library('table');
 		//$this->load->model('result_model');
