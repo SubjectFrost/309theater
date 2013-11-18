@@ -53,7 +53,5 @@ showt.add(Validate.Numericality, { onlyInteger: true } );
 	
  </script>
 </form>
-Hi <?php echo htmlspecialchars($_POST["name"]); ?>.
-Card number: <?php echo (int)$_POST["ccn"]; ?>.
 </body>
 </html>
