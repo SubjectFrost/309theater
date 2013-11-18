@@ -1,7 +1,7 @@
 <html>
 <body>
 <?php
-
+session_start();
 ?>
 
 <a href="uofttheater/index.php/main/showMovies">Show Movies</a><br>

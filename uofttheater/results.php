@@ -8,6 +8,7 @@
 <input type = "submit" value = "submit" id = "submit"/></form>
 
 <?php
+session_start();
 echo anchor('../../../index.php','Back') . "<br />";
 
 

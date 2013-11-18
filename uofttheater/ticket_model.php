@@ -1,4 +1,5 @@
 <?php
+session_start();
 class Ticket_model extends CI_Model {
 
 	function get_tickets()

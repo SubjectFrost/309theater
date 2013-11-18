@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="/resources/demos/style.css" />
 <body>
 <?php
+session_start();
 echo $_POST["showtime_id"];
 ?>
 
