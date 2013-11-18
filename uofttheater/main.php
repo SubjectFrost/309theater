@@ -260,12 +260,12 @@ class Main extends CI_Controller {
 	  $this->load->view('template', $data);
     }
     
-    function isSeatTaken($showtime_id, $seat)
+  /*  function isSeatTaken($showtime_id, $seat)
     {
 	  $this->load->model('ticket_model');
 	  return $this->ticket_model->check_seat($showtime_id, $seat);
     }
-    
+    */
 	function seats()
     {
 		//First we load the library and the model
