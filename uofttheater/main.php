@@ -48,7 +48,9 @@ class Main extends CI_Controller {
 	
 	function showResults()
     {
-		//echo $_POST["movieID"];
+		echo $_POST["movieID"];
+		echo $_POST["theaterID"];
+		echo $_POST["date"];
 		//First we load the library and the model
 		$this->load->library('table');
 		//$this->load->model('result_model');
@@ -65,7 +67,7 @@ class Main extends CI_Controller {
 		//if ($_POST["$theaterID"] != '0') $this->db->where('t.id',$_POST["$theaterID"]);
 		//if ($_POST["$date"] != '0') $this->db->where('s.time', $_POST["$date"]);
 		//$results = $this->db->get();
-		
+		/*
 		if ($_POST["movieID"] != null && $_POST["theaterID"] == null && $_POST["date"] == null) {
 		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where m.id = ?";
 		
@@ -96,7 +98,7 @@ class Main extends CI_Controller {
 		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where t.id = ? and s.date = ?";
 		$results = $this->db->query($sql,array($_POST["theaterID"], $_POST["date"]));
 		}
-		
+		*/
 		
 		//If it returns some results we continue
 		if ($results->num_rows() > 0){
