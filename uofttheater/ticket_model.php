@@ -11,7 +11,8 @@ class Ticket_model extends CI_Model {
 	function check_seat($showtime_id,$seat)
 	{
 		$sql = "select available from showtime where id=?";
-		$available = $this->db->query($sqel,array($showtime_id));
+		$available = $this->db->query($sql,array($showtime_id));
+		$ava = 0;
 		
 		foreach ($available->result() as $row){
 			$ava = $row->available;
