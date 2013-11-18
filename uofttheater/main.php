@@ -51,7 +51,7 @@ class Main extends CI_Controller {
 
 		//First we load the library and the model
 		$this->load->library('table');
-		//$this->load->model('result_model');
+		$this->load->model('result_model');
 		
 		//Then we call our model's get_showtimes function
 		//$results = $this->result_model->get_results();
