@@ -51,22 +51,20 @@ class Main extends CI_Controller {
 
 		//First we load the library and the model
 		$this->load->library('table');
-		$this->load->model('result_model');
+		//$this->load->model('result_model');
 		
 		//Then we call our model's get_showtimes function
-		$results = $this->result_model->get_results();
+		//$results = $this->result_model->get_results();
 
 		
+		$this->db->select('*');
+		$this->db->from('movie m , theater t, showtime s');
+		&this->db->where('m.id =  , t.id=');
 		
-		
-		//$this->db->select('*');
-		//$this->db->from('movie m , theater t, showtime s');
-		//$this->db->where('m.id =  , t.id=');
-		
-		//if ($movieID != '0') $this->db->where('m.id', $movieID);
-		//if ($theaterID != '0') $this->db->where('t.id', $theaterID);
-		//if ($date != '0') $this->db->where('s.time', $date);
-		//$results = $this->db->get();
+		if ($_POST["$movieID"] != '0') $this->db->where('m.id', $_POST["$movieID"]);
+		if ($_POST["$theaterID"] != '0') $this->db->where('t.id',$_POST["$theaterID"]);
+		//if ($_POST["$date"] != '0') $this->db->where('s.time', $_POST["$date"]);
+		$results = $this->db->get();
 		
 		//If it returns some results we continue
 		if ($results->num_rows() > 0){
