@@ -37,7 +37,7 @@ class Ticket_model extends CI_Model {
 		//make sure there is an available seat
 		$sqel = "select available from showtime where id=?";
 		$available = $this->db->query($sqel,array($showtime_id));
-		$ava = 0;
+		$ava = 3;
 		foreach ($available->result() as $row){
 			$ava = $row->available;
 		}
