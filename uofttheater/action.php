@@ -7,9 +7,9 @@
 <body>
 
  
- <form action="index.php/main/seats"  onsubmit="seats()" method="post" id="seats" >
+ <form action="index.php/main/seats"  onsubmit="return seats()" method="post" id="seats" >
  <p>Showtime ID: <input type="text" name="showtime_id" id="showtime_id"></p>
- <input type = "submit" value = "submit" id = "submit">
+ <input type = "submit" value = "submit" id = "submit1">
  </form>
  <?php
 //echo anchor('','Back') . "<br />";
