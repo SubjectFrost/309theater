@@ -1,3 +1,9 @@
+<?php
+if(! isset ($_SESSION["show_id"])) {
+$_SESSION["show_id"] = $_POST["showtime_id"];
+}
+?>
+
 <html>
 <head>
 <title>Test</title>
