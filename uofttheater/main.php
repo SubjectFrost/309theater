@@ -66,7 +66,7 @@ class Main extends CI_Controller {
 		if ($movieID != '0') $this->db->where('m.id', $movieID);
 		if ($theaterID != '0') $this->db->where('t.id', $theaterID);
 		//if ($date != '0') $this->db->where('s.time', $date);
-		$query = $this->db->get();
+		$results = $this->db->get();
 		
 		//If it returns some results we continue
 		if ($results->num_rows() > 0){
