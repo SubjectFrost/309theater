@@ -10,8 +10,16 @@ $_SESSION["show_id"] = $_POST["showtime_id"];
 <body>
 
  <?php echo '<p>Select a seat.</p>';
-
+ if ($_SESSION['show_id'] != NULL)
+ {
+ $x = $_SESSION['show_id'];
+ }
+ else
+ {
+ $_SESSION['show_id'] = $x;
+ }
  echo $_SESSION['show_id'];
+ echo $x;
  ?>
 
 <div id = "buttons">
