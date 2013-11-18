@@ -48,14 +48,14 @@ class Main extends CI_Controller {
 	
 	function showResults()
     {
-
+		echo $_POST["movieID"];
 		//First we load the library and the model
 		$this->load->library('table');
 		$this->load->model('result_model');
 		
 		//Then we call our model's get_showtimes function
-		$results = $this->result_model->get_results(&_POST["movieID"], $_POST["theaterID"], $_POST["date"]);
-		echo $_POST["movieID"];
+		//$results = $this->result_model->get_results(&_POST["movieID"], $_POST["theaterID"], $_POST["date"]);
+		$results = null;
 		
 		//$this->db->select('*');
 		//$this->db->from('movie m , theater t, showtime s');
