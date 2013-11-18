@@ -16,6 +16,7 @@ class Ticket_model extends CI_Model {
 		
 		foreach ($available->result() as $row){
 			$ava = $row->available;
+			echo $ava;
 		}
 		if ($ava == 3){
 			return 0;
