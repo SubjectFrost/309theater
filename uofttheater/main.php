@@ -255,7 +255,7 @@ class Main extends CI_Controller {
 	  }
 
 	  $table = array($_POST["fname"],$_POST["lname"],$_POST["ccn"],$_POST["ccex"],$_POST["showtime_id"],1);
-	  $data['ticket_info'] = $table; 
+	  $data['receipt'] = $table; 
 	  $data['main']='main/receipt';
 	  $this->load->view('template', $data);
 	  return -1;
@@ -288,7 +288,7 @@ class Main extends CI_Controller {
 				$table[] = array($row->id,$row->name,$row->address);
 		   }
 			//Next step is to place our created array into a new array variable, one that we are sending to the view.
-			$data['theaters'] = $table; 		   
+			$data['seats'] = $table; 		   
 		}
 		
 		//Now we are prepared to call the view, passing all the necessary variables inside the $data array
