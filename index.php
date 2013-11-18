@@ -1,6 +1,9 @@
 <html>
 <script type="text/javascript" src="livevalidation.js"></script>
+<?php
+session_start();
 
+?>
  
  <head>
   <title>Index</title>

@@ -6,9 +6,7 @@
  <input type = "hidden" name = "theaterID" value = "<?=$_POST["theaterID"]?>"/>
  <input type = "hidden" name = "date" value = "<?=$_POST["date"]?>"/>
 <input type = "submit" value = "submit" id = "submit"/></form>
-<form action="../../main/createTicket" method = "get">
-<input type = "hidden" name = "showtime_id" id = "showtime_id" value = "1234"/>
-</form>
+
 <?php
 echo anchor('../../../index.php','Back') . "<br />";
 
