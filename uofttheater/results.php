@@ -9,6 +9,7 @@
 
 <?php
 session_start();
+session_register("show_id");
 echo anchor('../../../index.php','Back') . "<br />";
 
 
