@@ -216,8 +216,8 @@ class Main extends CI_Controller {
     {
 	  //ccn is creditcardnumber (should be 16 digits), ccex is creditcardexpiration (should be 4 digits)
 	  
-	  $ccn_digits = strlen((string)$ccn);
-	  $ccex_digits = strlen((string)$ccex);
+	  $ccn_digits = strlen((string)$_POST["$ccn"]);
+	  $ccex_digits = strlen((string)$_POST["$ccex"]);
 	  
 	  if (($ccn_digits == 16) && ($ccex_digits == 4)) {
 		  $this->load->model('ticket_model');
