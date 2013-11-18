@@ -24,7 +24,7 @@ buttonImageOnly: true
  , minDate: +1,  dateFormat: 'mmy'});
 });
  </script>
- 
+ <?php echo $_SESSION['show_id']; ?>
  <input type="hidden" name="seat" id="seat" value = "<?=$_POST["seat"]?>"/> 
  <input type="hidden" name="showtimeid" id = "showtimeid" value="<?php echo $_SESSION['show_id']; ?>"/>
  <input type = "hidden" name = "movieID" value = "<?=$_POST["movieID"]?>"/>

@@ -10,6 +10,7 @@ $_SESSION["show_id"] = $_POST["showtime_id"];
 <body>
 
  <?php echo '<p>Select a seat.</p>';
+ echo $_SESSION['show_id'];
  ?>
 
 <div id = "buttons">
