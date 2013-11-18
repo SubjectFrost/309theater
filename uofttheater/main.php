@@ -70,7 +70,7 @@ class Main extends CI_Controller {
 		//$sql = "select m.title from movie m where m.id=?";
 	//	$results = $this->db->query($sql,array($_POST["movieID"]));
 		
-		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where m.id = ? , t.id=? , s.date = ?";
+		$sql = "select m.title, t.name, t.address, s.date, s.time, s.available	from movie m, theater t, showtime s where m.id = ? and t.id = ? and s.date = ?";
 		$results = $this->db->query($sql,array($_POST["movieID"], $_POST["theaterID"], $_POST["date"]));
 		
 		
